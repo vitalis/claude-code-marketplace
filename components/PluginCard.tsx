@@ -10,10 +10,10 @@ export default function PluginCard({ plugin }: PluginCardProps) {
     : plugin.author?.name || 'Unknown';
 
   return (
-    <div className="group relative border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-6 hover:shadow-xl hover:scale-[1.02] transition-all bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:border-blue-300 dark:hover:border-blue-600">
+    <div className="group relative border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-6 hover:shadow-xl hover:scale-[1.02] transition-all bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:border-blue-300 dark:hover:border-blue-600 flex flex-col h-full">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-      <div className="relative">
+      <div className="relative flex flex-col flex-1">
         <div className="flex justify-between items-start mb-3">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
             {plugin.name}
@@ -25,10 +25,11 @@ export default function PluginCard({ plugin }: PluginCardProps) {
           )}
         </div>
 
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed flex-1">
           {plugin.description || 'No description available'}
         </p>
 
+        <div className="mt-auto">
         <div className="flex items-center justify-between mb-4">
           <span className="text-sm text-gray-500 dark:text-gray-400">
             by {authorName}
@@ -92,6 +93,7 @@ export default function PluginCard({ plugin }: PluginCardProps) {
               Repository →
             </a>
           )}
+        </div>
         </div>
       </div>
     </div>
