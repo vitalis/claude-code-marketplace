@@ -83,51 +83,6 @@ export default function Home() {
       </header>
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Installation section */}
-        {showSetup && (
-          <div className="mb-12 max-w-3xl mx-auto">
-            <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
-              <button
-                onClick={handleDismissSetup}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                aria-label="Dismiss"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-
-              <div className="flex items-center gap-3 mb-4">
-                <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
-                  First Time Setup Required
-                </h2>
-                <span className="px-2.5 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
-                  One-time
-                </span>
-              </div>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
-                Add this marketplace to your Claude Code configuration:
-              </p>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-10 group-hover:opacity-20 transition-opacity" />
-                <div className="relative bg-gray-900 dark:bg-gray-950 rounded-xl p-4 font-mono text-sm overflow-x-auto">
-                  <code className="text-green-400">
-                    /plugin marketplace add joesaunderson/claude-code-marketplace
-                  </code>
-                  <button
-                    onClick={() => {
-                      navigator.clipboard.writeText('/plugin marketplace add joesaunderson/claude-code-marketplace');
-                    }}
-                    className="absolute top-3 right-3 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded-lg transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
-                  >
-                    Copy
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
         {marketplace.plugins.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 sm:py-20">
             <div className="text-center max-w-md px-4">
@@ -154,7 +109,52 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <SearchBar value={searchQuery} onChange={setSearchQuery} />
+            <div className="w-full max-w-2xl mx-auto mb-8">
+              {/* Installation section */}
+              {showSetup && (
+                <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-lg mb-6">
+                  <button
+                    onClick={handleDismissSetup}
+                    className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    aria-label="Dismiss"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
+                      First Time Setup
+                    </h2>
+                    <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
+                      One-time
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3">
+                    Add this marketplace to your Claude Code:
+                  </p>
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-10 group-hover:opacity-20 transition-opacity" />
+                    <div className="relative bg-gray-900 dark:bg-gray-950 rounded-xl p-3 font-mono text-xs sm:text-sm overflow-x-auto">
+                      <code className="text-green-400">
+                        /plugin marketplace add joesaunderson/claude-code-marketplace
+                      </code>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText('/plugin marketplace add joesaunderson/claude-code-marketplace');
+                        }}
+                        className="absolute top-2 right-2 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <SearchBar value={searchQuery} onChange={setSearchQuery} />
+            </div>
 
             <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
               Showing {filteredPlugins.length} of {marketplace.plugins.length} plugins
