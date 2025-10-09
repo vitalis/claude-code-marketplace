@@ -16,11 +16,23 @@ export interface PluginAuthor {
   url?: string;
 }
 
-export type PluginSource = string | {
-  type: string;
-  url: string;
-  [key: string]: unknown;
-};
+export type PluginSource =
+  | string
+  | {
+      source: "github";
+      repo: string;
+      path?: string;
+      ref?: string;
+    }
+  | {
+      source: "url";
+      url: string;
+    }
+  | {
+      type: string;
+      url: string;
+      [key: string]: unknown;
+    };
 
 export interface PluginEntry {
   name: string;
