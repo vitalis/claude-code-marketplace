@@ -8,5 +8,69 @@
     "description": "Community marketplace for Claude Code plugins",
     "version": "1.0.0"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "agent-sdk-dev",
+      "description": "Development kit for working with the Claude Agent SDK",
+      "source": "https://github.com/anthropics/claude-code/tree/main/plugins/agent-sdk-dev",
+      "category": "development",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-code",
+      "tags": ["agent", "sdk", "development"]
+    },
+    {
+      "name": "pr-review-toolkit",
+      "description": "Comprehensive PR review agents specializing in comments, tests, error handling, type design, code quality, and code simplification",
+      "version": "1.0.0",
+      "source": "https://github.com/anthropics/claude-code/tree/main/plugins/pr-review-toolkit",
+      "category": "productivity",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-code",
+      "tags": ["pr", "review", "code-quality", "productivity"]
+    },
+    {
+      "name": "commit-commands",
+      "description": "Commands for git commit workflows including commit, push, and PR creation",
+      "version": "1.0.0",
+      "source": "https://github.com/anthropics/claude-code/tree/main/plugins/commit-commands",
+      "category": "productivity",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-code",
+      "tags": ["git", "commit", "workflow", "productivity"]
+    },
+    {
+      "name": "feature-dev",
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+      "version": "1.0.0",
+      "source": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev",
+      "category": "development",
+      "author": {
+        "name": "Siddharth Bidasaria",
+        "email": "sbidasaria@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-code",
+      "tags": ["feature", "development", "workflow", "architecture"]
+    },
+    {
+      "name": "security-guidance",
+      "description": "Security best practices and guidance for secure code development",
+      "source": "https://github.com/anthropics/claude-code/tree/main/plugins/security-guidance",
+      "category": "security",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-code",
+      "tags": ["security", "best-practices", "guidance"]
+    }
+  ]
 }
