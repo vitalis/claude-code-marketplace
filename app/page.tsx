@@ -10,6 +10,18 @@ const marketplace = marketplaceData as MarketplaceManifest;
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showSetup, setShowSetup] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const dismissed = localStorage.getItem('setupDismissed');
+      return dismissed !== 'true';
+    }
+    return true;
+  });
+
+  const handleDismissSetup = () => {
+    setShowSetup(false);
+    localStorage.setItem('setupDismissed', 'true');
+  };
 
   const filteredPlugins = useMemo(() => {
     if (!searchQuery.trim()) {
@@ -29,6 +41,24 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-gray-950 dark:via-blue-950/20 dark:to-indigo-950/30">
+      {/* Announcement Banner */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center justify-center gap-2 text-sm sm:text-base">
+            <span className="font-semibold">🎉 New!</span>
+            <span>Claude Code Plugins are here.</span>
+            <a
+              href="https://www.anthropic.com/news/claude-code-plugins"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-blue-100 transition-colors font-medium"
+            >
+              Learn more →
+            </a>
+          </div>
+        </div>
+      </div>
+
       <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
@@ -54,37 +84,49 @@ export default function Home() {
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Installation section */}
-        <div className="mb-12 max-w-3xl mx-auto">
-          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
-            <div className="flex items-center gap-3 mb-4">
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
-                First Time Setup Required
-              </h2>
-              <span className="px-2.5 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
-                One-time
-              </span>
-            </div>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
-              Add this marketplace to your Claude Code configuration:
-            </p>
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-10 group-hover:opacity-20 transition-opacity" />
-              <div className="relative bg-gray-900 dark:bg-gray-950 rounded-xl p-4 font-mono text-sm overflow-x-auto">
-                <code className="text-green-400">
-                  /plugin marketplace add joesaunderson/claude-code-marketplace
-                </code>
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText('/plugin marketplace add joesaunderson/claude-code-marketplace');
-                  }}
-                  className="absolute top-3 right-3 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded-lg transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
-                >
-                  Copy
-                </button>
+        {showSetup && (
+          <div className="mb-12 max-w-3xl mx-auto">
+            <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
+              <button
+                onClick={handleDismissSetup}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                aria-label="Dismiss"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div className="flex items-center gap-3 mb-4">
+                <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
+                  First Time Setup Required
+                </h2>
+                <span className="px-2.5 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
+                  One-time
+                </span>
+              </div>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
+                Add this marketplace to your Claude Code configuration:
+              </p>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-10 group-hover:opacity-20 transition-opacity" />
+                <div className="relative bg-gray-900 dark:bg-gray-950 rounded-xl p-4 font-mono text-sm overflow-x-auto">
+                  <code className="text-green-400">
+                    /plugin marketplace add joesaunderson/claude-code-marketplace
+                  </code>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText('/plugin marketplace add joesaunderson/claude-code-marketplace');
+                    }}
+                    className="absolute top-3 right-3 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded-lg transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+                  >
+                    Copy
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         {marketplace.plugins.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 sm:py-20">
