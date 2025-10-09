@@ -48,7 +48,7 @@ export default function Home() {
             <span className="font-semibold">🎉 New!</span>
             <span>Claude Code Plugins are here.</span>
             <a
-              href="https://www.anthropic.com/news/claude-code-plugins"
+              href="https://www.anthropic.com/news/claude-code-plugins?utm_source=claudecodemarketplace&utm_medium=banner&utm_campaign=plugin_launch"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-blue-100 transition-colors font-medium"
