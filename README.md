@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Claude Code Marketplace
 
-## Getting Started
+The community marketplace for Claude Code plugins. Discover, share, and install plugins to enhance your Claude Code experience.
 
-First, run the development server:
+Browse plugins at [claudecodemarketplace.com](https://claudecodemarketplace.com)
+
+## Install the Marketplace
+
+Add this marketplace to your Claude Code configuration:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/plugin marketplace add joesaunderson/claude-code-marketplace
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once added, you'll be able to browse and install any plugin from this marketplace directly in Claude Code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Update Marketplace
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To refresh plugin listings and metadata:
 
-## Learn More
+```bash
+/plugin marketplace update joesaunderson/claude-code-marketplace
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Submit Your Plugin
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Have a plugin you'd like to share with the community? We'd love to include it!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**To submit a plugin:**
 
-## Deploy on Vercel
+1. Fork this repository
+2. Edit `.claude-plugin/marketplace.json` and add your plugin entry
+3. Submit a Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Your plugin entry should include:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+{
+  "name": "your-plugin-name",
+  "source": "https://github.com/username/your-plugin-repo",
+  "description": "Brief description of what your plugin does",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "license": "MIT",
+  "tags": ["relevant", "tags"]
+}
+```
+
+### Plugin Sources
+
+The `source` field supports multiple formats:
+
+- **GitHub repository**: `"username/repo"` or `"https://github.com/username/repo"`
+- **Git URL**: `"https://example.com/repo.git"`
+- **Local path**: `"file:///absolute/path/to/plugin"`
+- **HTTP URL**: `"https://example.com/plugin.zip"`
+
+See the [Plugin Sources](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#plugin-sources) documentation for more details.
+
+For complete schema documentation, see [Plugin Entry Schema](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#plugin-entries).
+
+## Contributing
+
+Contributions are welcome! Whether you're submitting a plugin, fixing a bug, or improving documentation, we appreciate your help.
+
+See [docs/development.md](docs/development.md) for development setup and technical details.
+
+## License
+
+MIT

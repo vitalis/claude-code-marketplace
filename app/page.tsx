@@ -1,102 +1,114 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useMemo } from 'react';
+import PluginCard from '@/components/PluginCard';
+import SearchBar from '@/components/SearchBar';
+import { MarketplaceManifest } from '@/types/plugin';
+import marketplaceData from '@/.claude-plugin/marketplace.json';
+
+const marketplace = marketplaceData as MarketplaceManifest;
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [searchQuery, setSearchQuery] = useState('');
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const filteredPlugins = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return marketplace.plugins;
+    }
+
+    const query = searchQuery.toLowerCase();
+    return marketplace.plugins.filter((plugin) => {
+      const nameMatch = plugin.name.toLowerCase().includes(query);
+      const descriptionMatch = plugin.description?.toLowerCase().includes(query);
+      const tagsMatch = plugin.tags?.some((tag) => tag.toLowerCase().includes(query));
+      const keywordsMatch = plugin.keywords?.some((keyword) => keyword.toLowerCase().includes(query));
+
+      return nameMatch || descriptionMatch || tagsMatch || keywordsMatch;
+    });
+  }, [searchQuery]);
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Claude Code Marketplace
+              </h1>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">
+                {marketplace.metadata?.description || 'Discover and install Claude Code plugins'}
+              </p>
+            </div>
+            <a
+              href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+            >
+              Submit Plugin
+            </a>
+          </div>
         </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {marketplace.plugins.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-20">
+            <div className="text-center max-w-md">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                No Plugins Yet
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-8">
+                Be the first to contribute! Submit your Claude Code plugin and help build the community marketplace.
+              </p>
+              <a
+                href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              >
+                Submit Your Plugin
+              </a>
+            </div>
+          </div>
+        ) : (
+          <>
+            <SearchBar value={searchQuery} onChange={setSearchQuery} />
+
+            <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+              Showing {filteredPlugins.length} of {marketplace.plugins.length} plugins
+            </div>
+
+            {filteredPlugins.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-500 dark:text-gray-400 mb-4">
+                  No plugins found matching your search.
+                </p>
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  Clear search
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredPlugins.map((plugin) => (
+                  <PluginCard key={plugin.name} plugin={plugin} />
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <p className="text-center text-gray-600 dark:text-gray-300 text-sm">
+            Claude Code Marketplace - Community plugins for Claude Code
+          </p>
+        </div>
       </footer>
     </div>
   );
