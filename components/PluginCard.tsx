@@ -53,6 +53,24 @@ export default function PluginCard({ plugin }: PluginCardProps) {
           </div>
         )}
 
+        {/* Install command */}
+        <div className="mb-4 relative group/install">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg opacity-5 group-hover/install:opacity-10 transition-opacity" />
+          <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-3 font-mono text-xs overflow-x-auto">
+            <code className="text-green-400">
+              /plugin install {plugin.name}@claude-code-marketplace
+            </code>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(`/plugin install ${plugin.name}@claude-code-marketplace`);
+              }}
+              className="absolute top-2 right-2 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-[10px] rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+
         <div className="flex gap-3 pt-2 border-t border-gray-100 dark:border-gray-700">
           {plugin.homepage && (
             <a
