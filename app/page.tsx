@@ -30,13 +30,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+            <div className="flex-1">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
                 Claude Code Marketplace
               </h1>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
+              <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 {marketplace.metadata?.description || 'Discover and install Claude Code plugins'}
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function Home() {
               href="https://github.com/joesaunderson/claude-code-marketplace/compare"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base rounded-lg font-medium transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
             >
               Submit Plugin
             </a>
@@ -54,19 +54,19 @@ export default function Home() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {marketplace.plugins.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20">
-            <div className="text-center max-w-md">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="flex flex-col items-center justify-center py-12 sm:py-20">
+            <div className="text-center max-w-md px-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                 No Plugins Yet
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
                 Be the first to contribute! Submit your Claude Code plugin and help build the community marketplace.
               </p>
               <a
                 href="https://github.com/joesaunderson/claude-code-marketplace/compare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base rounded-lg font-medium transition-colors shadow-sm hover:shadow-md"
               >
                 Submit Your Plugin
               </a>
