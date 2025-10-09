@@ -28,15 +28,15 @@ export default function Home() {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-gray-950 dark:via-blue-950/20 dark:to-indigo-950/30">
+      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
             <div className="flex-1">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
                 Claude Code Marketplace
               </h1>
-              <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-300">
+              <p className="mt-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
                 {marketplace.metadata?.description || 'Discover and install Claude Code plugins'}
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function Home() {
               href="https://github.com/joesaunderson/claude-code-marketplace/compare"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base rounded-lg font-medium transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm sm:text-base rounded-xl font-medium transition-all whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105"
             >
               Submit Plugin
             </a>
@@ -52,21 +52,26 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {marketplace.plugins.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 sm:py-20">
             <div className="text-center max-w-md px-4">
+              <div className="mb-6 inline-block p-4 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-2xl">
+                <svg className="w-16 h-16 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </div>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                 No Plugins Yet
               </h2>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
                 Be the first to contribute! Submit your Claude Code plugin and help build the community marketplace.
               </p>
               <a
                 href="https://github.com/joesaunderson/claude-code-marketplace/compare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base rounded-lg font-medium transition-colors shadow-sm hover:shadow-md"
+                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm sm:text-base rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Submit Your Plugin
               </a>
@@ -103,7 +108,7 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
+      <footer className="mt-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-gray-600 dark:text-gray-300 text-sm">
             Claude Code Marketplace - Community plugins for Claude Code
