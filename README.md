@@ -52,7 +52,6 @@ The `source` field supports multiple formats:
 
 - **GitHub repository**: `"username/repo"` or `"https://github.com/username/repo"`
 - **Git URL**: `"https://example.com/repo.git"`
-- **Local path**: `"file:///absolute/path/to/plugin"`
 - **HTTP URL**: `"https://example.com/plugin.zip"`
 
 See the [Plugin Sources](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#plugin-sources) documentation for more details.
@@ -64,6 +63,12 @@ For complete schema documentation, see [Plugin Entry Schema](https://docs.claude
 Contributions are welcome! Whether you're submitting a plugin, fixing a bug, or improving documentation, we appreciate your help.
 
 See [docs/development.md](docs/development.md) for development setup and technical details.
+
+## Important Notes
+
+This marketplace is a **directory service only**. We don't host plugin files - your plugin must be hosted in its own repository or accessible via a public URL. This marketplace simply provides a centralized registry to help users discover and install your plugin from its source.
+
+When you submit a plugin, you're adding a reference to your plugin's location, not uploading the plugin itself.
 
 ## License
 
