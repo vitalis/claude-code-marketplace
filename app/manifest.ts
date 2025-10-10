@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Claude Code Plugin Marketplaces',
+    name: 'Claude Code Plugins',
     short_name: 'Claude Plugins',
-    description: 'Decentralized hub for Claude Code plugin marketplaces',
+    description: 'Discover and install plugins for Claude Code',
     start_url: '/',
     display: 'standalone',
     background_color: '#faf9f5',

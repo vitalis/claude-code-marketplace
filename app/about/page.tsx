@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'About & Safety',
-  description: 'Learn about Claude Code Plugin Marketplaces, how it works, and our safety practices',
+  description: 'Learn about Claude Code Plugins directory, how it works, and our safety practices for discovering and installing extensions.',
 };
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl p-8 shadow-lg">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            About Claude Code Plugin Marketplaces
+            About Claude Code Plugins
           </h1>
 
           <section className="mb-8">

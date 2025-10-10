@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 const siteUrl = 'https://claudecodemarketplace.com';
-const siteName = 'Claude Code Plugin Marketplaces';
-const siteDescription = 'The decentralized hub for discovering Claude Code plugin marketplaces - Browse multiple community-maintained plugin collections in one place';
+const siteName = 'Claude Code Plugins';
+const siteDescription = 'Discover and install plugins for Claude Code. Browse hundreds of plugins to extend your AI coding assistant with new tools and capabilities.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -20,19 +20,19 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
-    'Claude Code',
     'Claude Code plugins',
-    'Claude Code marketplace',
-    'Claude Code hub',
-    'plugin marketplace hub',
+    'plugins for Claude Code',
+    'Claude Code extensions',
     'Claude plugins',
-    'AI code editor',
-    'Claude extensions',
-    'code editor plugins',
-    'developer tools',
+    'Claude Code tools',
+    'Claude Code add-ons',
+    'AI code editor plugins',
+    'Claude Code marketplace',
+    'Anthropic Claude Code',
+    'Claude Code integrations',
+    'Claude Code templates',
     'AI development tools',
-    'Anthropic Claude',
-    'decentralized marketplace',
+    'code editor extensions',
   ],
   authors: [{ name: 'Claude Code Community' }],
   creator: 'Claude Code Community',

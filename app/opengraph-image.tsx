@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 // Image metadata
-export const alt = 'Claude Code Plugin Marketplaces';
+export const alt = 'Claude Code Plugins - Discover and Install Extensions';
 export const size = {
   width: 1200,
   height: 630,
@@ -42,7 +42,7 @@ export default async function OgImage() {
               color: '#d97757',
             }}
           >
-            Claude Code Plugin Marketplaces
+            Claude Code Plugins
           </div>
           <div
             style={{
@@ -51,7 +51,7 @@ export default async function OgImage() {
               maxWidth: 900,
             }}
           >
-            Discover and install plugin marketplaces to enhance your Claude Code experience
+            Discover and install plugins to extend your AI coding assistant
           </div>
         </div>
       </div>

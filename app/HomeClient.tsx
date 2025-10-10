@@ -8,9 +8,8 @@ import PluginCard from '@/components/PluginCard';
 import SearchBar from '@/components/SearchBar';
 import ThemeToggle from '@/components/ThemeToggle';
 import AnimatedHeader from '@/components/AnimatedHeader';
+import StructuredData from '@/components/StructuredData';
 import marketplacesData from '@/.claude-plugin/marketplaces.json';
-
-const hub = marketplacesData as { hub: { name: string; description: string; version: string; }; };
 
 interface HomeClientProps {
   marketplaces: FetchedMarketplace[];
@@ -75,6 +74,8 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
 
   return (
     <div className="min-h-screen bg-[#faf9f5] dark:bg-[#0A0A0A] flex flex-col">
+      <StructuredData />
+
       {/* Announcement Banner */}
       <div className="bg-[#1E1E1E] dark:bg-[#141414] text-white border-b border-gray-800 dark:border-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -94,6 +95,9 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
 
       <header className="bg-[#f0eee6] dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-gray-800" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          {/* SEO H1 - visually hidden but accessible */}
+          <h1 className="sr-only">Claude Code Plugins - Discover and Install Extensions for Claude Code</h1>
+
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
             <AnimatedHeader />
             <div className="hidden sm:flex items-center gap-3 sm:flex-shrink-0">
