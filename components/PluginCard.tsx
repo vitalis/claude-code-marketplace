@@ -9,7 +9,20 @@ export default function PluginCard({ plugin }: PluginCardProps) {
     ? plugin.author
     : plugin.author?.name || 'Unknown';
 
-  const sourceUrl = plugin.repository || plugin.homepage;
+  // Validate URLs to prevent malicious links
+  const validateUrl = (url: string | undefined): string | null => {
+    if (!url) return null;
+    try {
+      const parsed = new URL(url);
+      // Only allow https URLs for security
+      if (parsed.protocol !== 'https:') return null;
+      return url;
+    } catch {
+      return null;
+    }
+  };
+
+  const sourceUrl = validateUrl(plugin.repository || plugin.homepage);
   const isGitHub = sourceUrl?.includes('github.com');
   const linkText = isGitHub ? 'View on GitHub' : 'View Source';
 
