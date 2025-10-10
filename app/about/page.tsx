@@ -129,7 +129,7 @@ export default function AboutPage() {
             <p className="text-gray-700 dark:text-gray-300 mb-3">
               Want to list your marketplace in the hub?{' '}
               <a
-                href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+                href="https://github.com/joesaunderson/claude-code-marketplace"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 dark:text-blue-400 hover:underline"
