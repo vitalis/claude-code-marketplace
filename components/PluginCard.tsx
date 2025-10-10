@@ -71,8 +71,9 @@ export default function PluginCard({ plugin }: PluginCardProps) {
           </div>
         )}
 
-        {/* Install command */}
+        {/* Add to Claude Code command */}
         <div className="mb-4 relative group/install">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Add to your Claude Code editor:</p>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg opacity-5 group-hover/install:opacity-10 transition-opacity" />
           <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-3 font-mono text-xs overflow-x-auto">
             <code className="text-green-400">

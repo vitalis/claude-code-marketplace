@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const siteUrl = 'https://claudecodemarketplace.com';
 const siteName = 'Claude Code Marketplace';
-const siteDescription = 'Community marketplace for Claude Code plugins - Discover and install plugins to enhance your Claude Code experience';
+const siteDescription = 'Community marketplace for Claude Code plugins - Browse open-source extensions for Anthropic\'s Claude Code editor';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
