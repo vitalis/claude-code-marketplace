@@ -7,6 +7,7 @@ import MarketplaceCard from '@/components/MarketplaceCard';
 import PluginCard from '@/components/PluginCard';
 import SearchBar from '@/components/SearchBar';
 import ThemeToggle from '@/components/ThemeToggle';
+import AnimatedHeader from '@/components/AnimatedHeader';
 import marketplacesData from '@/.claude-plugin/marketplaces.json';
 
 const hub = marketplacesData as { hub: { name: string; description: string; version: string; }; };
@@ -93,17 +94,8 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
 
       <header className="bg-[#f0eee6] dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-gray-800" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 flex-wrap">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-900 dark:text-white">
-                  Claude Code Marketplace Hub
-                </h1>
-              </div>
-              <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400" role="doc-subtitle">
-                {hub.hub.description}
-              </p>
-            </div>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+            <AnimatedHeader />
             <div className="flex items-center gap-3">
               <ThemeToggle />
               <a

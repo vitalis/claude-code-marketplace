@@ -1,0 +1,61 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
+const VERBS = [
+  'Brewing',
+  'Clauding',
+  'Conjuring',
+  'Crafting',
+  'Finagling',
+  'Forging',
+  'Hatching',
+  'Herding',
+  'Honking',
+  'Hustling',
+  'Moseying',
+  'Noodling',
+  'Percolating',
+  'Puttering',
+  'Reticulating',
+  'Schlepping',
+  'Shucking',
+  'Smooshing',
+  'Vibing',
+];
+
+export default function AnimatedHeader() {
+  const [currentVerb, setCurrentVerb] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentVerb((prev) => (prev + 1) % VERBS.length);
+        setIsVisible(true);
+      }, 300);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 w-full">
+      <div className="flex-1">
+        <div className="flex items-center gap-2 flex-wrap">
+          <span
+            className={`inline-block text-sm sm:text-base font-medium text-[#d97757] px-2.5 py-1 border-2 border-[#d97757] rounded-md transition-all duration-300 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1'
+            }`}
+          >
+            {VERBS[currentVerb]}...
+          </span>
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+            Discover and add marketplaces to extend Claude Code
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
