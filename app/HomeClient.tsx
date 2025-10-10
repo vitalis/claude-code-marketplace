@@ -96,13 +96,13 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
             <AnimatedHeader />
-            <div className="flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-3 sm:flex-shrink-0">
               <ThemeToggle />
               <a
                 href="https://github.com/joesaunderson/claude-code-marketplace/compare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
+                className="inline-flex items-center justify-center px-4 py-2 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
               >
                 Submit Marketplace
               </a>
@@ -247,6 +247,19 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
 
       <footer className="mt-auto bg-[#f0eee6] dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-gray-800" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Mobile action buttons */}
+          <div className="flex sm:hidden items-center justify-center gap-3 mb-6">
+            <ThemeToggle />
+            <a
+              href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-4 py-2 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
+            >
+              Submit Marketplace
+            </a>
+          </div>
+
           <div className="max-w-3xl mx-auto">
             <p className="text-center text-gray-600 dark:text-gray-400 text-sm mb-4">
               A decentralized hub connecting you to Claude Code plugin marketplaces

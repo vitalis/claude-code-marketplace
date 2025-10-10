@@ -41,20 +41,18 @@ export default function AnimatedHeader() {
   }, []);
 
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 w-full">
-      <div className="flex-1">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span
-            className={`inline-block text-sm sm:text-base font-medium text-[#d97757] px-2.5 py-1 border-2 border-[#d97757] rounded-md transition-all duration-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1'
-            }`}
-          >
-            {VERBS[currentVerb]}...
-          </span>
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-            Discover and add marketplaces to extend Claude Code
-          </p>
-        </div>
+    <div className="w-full">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 items-center sm:items-start">
+        <span
+          className={`inline-block text-sm sm:text-base font-medium text-[#d97757] px-2.5 py-1 border-2 border-[#d97757] rounded-md transition-all duration-300 w-fit ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1'
+          }`}
+        >
+          {VERBS[currentVerb]}...
+        </span>
+        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 text-center sm:text-left">
+          Discover and add marketplaces to extend Claude Code
+        </p>
       </div>
     </div>
   );
