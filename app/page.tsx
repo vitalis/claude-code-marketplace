@@ -59,14 +59,14 @@ export default function Home() {
         </div>
       </div>
 
-      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
             <div className="flex-1">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
                 Claude Code Marketplace
               </h1>
-              <p className="mt-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+              <p className="mt-2 text-sm sm:text-base text-gray-700 dark:text-gray-300" role="doc-subtitle">
                 {marketplace.metadata?.description || 'Discover and install Claude Code plugins'}
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8" role="main">
         {marketplace.plugins.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 sm:py-20">
             <div className="text-center max-w-md px-4">
@@ -183,11 +183,15 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="mt-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50">
+      <footer className="mt-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-gray-600 dark:text-gray-300 text-sm">
             Claude Code Marketplace - Community plugins for Claude Code
           </p>
+          <nav className="mt-4 flex justify-center gap-6 text-xs text-gray-500 dark:text-gray-400" aria-label="Footer navigation">
+            <a href="https://github.com/joesaunderson/claude-code-marketplace" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+            <a href="https://www.anthropic.com/news/claude-code-plugins" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">About Claude Code</a>
+          </nav>
         </div>
       </footer>
     </div>
