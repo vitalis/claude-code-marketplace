@@ -99,7 +99,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
             <div className="hidden sm:flex items-center gap-3 sm:flex-shrink-0">
               <ThemeToggle />
               <a
-                href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+                href="https://github.com/joesaunderson/claude-code-marketplace"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
@@ -122,7 +122,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                 Be the first to contribute! Submit your Claude Code marketplace and help build the ecosystem.
               </p>
               <a
-                href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+                href="https://github.com/joesaunderson/claude-code-marketplace"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-5 py-2.5 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors rounded-lg"
@@ -251,7 +251,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
           <div className="flex sm:hidden items-center justify-center gap-3 mb-6">
             <ThemeToggle />
             <a
-              href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+              href="https://github.com/joesaunderson/claude-code-marketplace"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-4 py-2 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
