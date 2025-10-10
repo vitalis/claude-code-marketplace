@@ -1,0 +1,283 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+import { FetchedMarketplace } from '@/types/marketplace';
+import { Plugin } from '@/types/plugin';
+import MarketplaceCard from '@/components/MarketplaceCard';
+import PluginCard from '@/components/PluginCard';
+import SearchBar from '@/components/SearchBar';
+import marketplacesData from '@/.claude-plugin/marketplaces.json';
+
+const hub = marketplacesData as { hub: { name: string; description: string; version: string; }; };
+
+interface HomeClientProps {
+  marketplaces: FetchedMarketplace[];
+}
+
+export default function HomeClient({ marketplaces }: HomeClientProps) {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Filter and search logic
+  const { filteredMarketplaces, filteredPlugins, isSearching, hasResults } = useMemo(() => {
+    const query = searchQuery.toLowerCase().trim();
+    const isSearching = query.length > 0;
+
+    if (!isSearching) {
+      return {
+        filteredMarketplaces: marketplaces,
+        filteredPlugins: [],
+        isSearching: false,
+        hasResults: false,
+      };
+    }
+
+    // Search marketplaces
+    const matchedMarketplaces = marketplaces.filter((marketplace) => {
+      const searchableText = [
+        marketplace.name,
+        marketplace.description,
+        marketplace.owner.name,
+        ...(marketplace.tags || []),
+      ].join(' ').toLowerCase();
+
+      return searchableText.includes(query);
+    });
+
+    // Search plugins across all marketplaces
+    const matchedPlugins: Array<{ plugin: Plugin; marketplace: FetchedMarketplace }> = [];
+
+    marketplaces.forEach((marketplace) => {
+      if (marketplace.manifest?.plugins) {
+        marketplace.manifest.plugins.forEach((plugin) => {
+          const searchableText = [
+            plugin.name,
+            plugin.description,
+            ...(plugin.tags || []),
+            ...(plugin.keywords || []),
+          ].join(' ').toLowerCase();
+
+          if (searchableText.includes(query)) {
+            matchedPlugins.push({ plugin, marketplace });
+          }
+        });
+      }
+    });
+
+    return {
+      filteredMarketplaces: matchedMarketplaces,
+      filteredPlugins: matchedPlugins,
+      isSearching: true,
+      hasResults: matchedMarketplaces.length > 0 || matchedPlugins.length > 0,
+    };
+  }, [searchQuery, marketplaces]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 flex flex-col">
+      {/* Announcement Banner */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center justify-center gap-2 text-sm sm:text-base">
+            <span className="font-semibold">🎉 New!</span>
+            <span>Claude Code Plugins are here.</span>
+            <a
+              href="https://www.anthropic.com/news/claude-code-plugins?utm_source=claudecodemarketplace&utm_medium=banner&utm_campaign=plugin_launch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-blue-100 transition-colors font-medium"
+            >
+              Learn more →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm" role="banner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 flex-wrap">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                  Claude Code Marketplace Hub
+                </h1>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-medium">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                  Hub
+                </span>
+              </div>
+              <p className="mt-2 text-sm sm:text-base text-gray-700 dark:text-gray-300" role="doc-subtitle">
+                {hub.hub.description}
+              </p>
+            </div>
+            <a
+              href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm sm:text-base rounded-xl font-medium transition-all whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              Submit Marketplace
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8" role="main">
+        {marketplaces.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-12 sm:py-20">
+            <div className="text-center max-w-md px-4">
+              <div className="mb-6 inline-block p-4 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-2xl">
+                <svg className="w-16 h-16 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
+                No Marketplaces Yet
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
+                Be the first to contribute! Submit your Claude Code marketplace and help build the ecosystem.
+              </p>
+              <a
+                href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm sm:text-base rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                Submit Your Marketplace
+              </a>
+            </div>
+          </div>
+        ) : (
+          <>
+            <div className="mb-8">
+              <SearchBar
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Search marketplaces and plugins by name, description, tags, or keywords..."
+              />
+            </div>
+
+            {!isSearching ? (
+              <>
+                <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+                  Showing {filteredMarketplaces.length} of {marketplaces.length} marketplaces
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {filteredMarketplaces.map((marketplace) => (
+                    <MarketplaceCard key={marketplace.id} marketplace={marketplace} />
+                  ))}
+                </div>
+              </>
+            ) : !hasResults ? (
+              <div className="text-center py-12">
+                <p className="text-gray-500 dark:text-gray-400 mb-4">
+                  No marketplaces or plugins found matching your search.
+                </p>
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  Clear search
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-8">
+                {/* Marketplace Results */}
+                {filteredMarketplaces.length > 0 && (
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                      Marketplaces ({filteredMarketplaces.length})
+                    </h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      {filteredMarketplaces.map((marketplace) => (
+                        <MarketplaceCard key={marketplace.id} marketplace={marketplace} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Plugin Results */}
+                {filteredPlugins.length > 0 && (
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+                        Plugins ({filteredPlugins.length})
+                      </h2>
+                      <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Install marketplace first, then plugin</span>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {filteredPlugins.map(({ plugin, marketplace }) => (
+                        <div key={`${marketplace.id}-${plugin.name}`} className="flex flex-col gap-3">
+                          {/* Marketplace Info Card */}
+                          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 border-2 border-indigo-200 dark:border-indigo-800 rounded-xl p-3">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <svg className="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                                <span className="text-sm font-semibold text-indigo-900 dark:text-indigo-200">
+                                  From: {marketplace.name}
+                                </span>
+                              </div>
+                              <a
+                                href={`/marketplace/${marketplace.id}`}
+                                className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline"
+                              >
+                                View →
+                              </a>
+                            </div>
+                            <div className="relative group/install">
+                              <p className="text-[10px] uppercase tracking-wide text-indigo-700 dark:text-indigo-300 font-semibold mb-1">Step 1: Install Marketplace</p>
+                              <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto">
+                                <code className="text-green-400">
+                                  /plugin marketplace add {marketplace.repository.replace('https://github.com/', '')}
+                                </code>
+                                <button
+                                  onClick={() => {
+                                    navigator.clipboard.writeText(`/plugin marketplace add ${marketplace.repository.replace('https://github.com/', '')}`);
+                                  }}
+                                  className="absolute top-1.5 right-1.5 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-[10px] rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+                                >
+                                  Copy
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Plugin Card */}
+                          <PluginCard plugin={plugin} marketplaceName={marketplace.id} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </>
+        )}
+      </main>
+
+      <footer className="mt-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50" role="contentinfo">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-center text-gray-600 dark:text-gray-300 text-sm mb-2">
+              Claude Code Marketplace Hub - Discover plugin marketplaces
+            </p>
+            <p className="text-center text-gray-500 dark:text-gray-400 text-xs mb-4">
+              A decentralized hub connecting you to Claude Code plugin marketplaces
+            </p>
+            <nav className="flex justify-center gap-6 text-xs text-gray-500 dark:text-gray-400" aria-label="Footer navigation">
+              <a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About & Safety</a>
+              <a href="https://github.com/joesaunderson/claude-code-marketplace" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+              <a href="https://www.anthropic.com/news/claude-code-plugins" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">About Claude Code</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

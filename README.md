@@ -1,75 +1,233 @@
-# Claude Code Marketplace
+# Claude Code Marketplace Hub
 
-The community marketplace for Claude Code plugins. Discover, share, and install plugins to enhance your Claude Code experience.
+The decentralized hub for discovering Claude Code plugin marketplaces. Browse multiple community-maintained marketplaces in one place.
 
-Browse plugins at [claudecodemarketplace.com](https://claudecodemarketplace.com)
+Visit the hub at [claudecodemarketplace.com](https://claudecodemarketplace.com)
 
-## Install the Marketplace
+## What is the Marketplace Hub?
 
-Add this marketplace to your Claude Code configuration:
+Instead of hosting plugins directly, this hub connects you to multiple specialized plugin marketplaces maintained by different communities. Each marketplace can focus on specific topics, frameworks, or use cases.
 
-```bash
-/plugin marketplace add joesaunderson/claude-code-marketplace
-```
+**Benefits:**
+- 🚀 **Decentralized** - No single bottleneck for plugin submissions
+- 🎯 **Specialized** - Marketplaces can focus on specific niches
+- ⚡ **Fast Updates** - Each marketplace controls its own plugin listings
+- 🌐 **Community Driven** - Anyone can create and maintain a marketplace
 
-Once added, you'll be able to browse and install any plugin from this marketplace directly in Claude Code.
+## Submit Your Marketplace
 
-### Update Marketplace
+Have a Claude Code plugin marketplace you'd like to list in the hub? We'd love to include it!
 
-To refresh plugin listings and metadata:
+### Prerequisites
 
-```bash
-/plugin marketplace update joesaunderson/claude-code-marketplace
-```
+Your marketplace must:
+1. Be hosted on GitHub
+2. Contain a `.claude-plugin/marketplace.json` file following [Anthropic's schema](https://anthropic.com/claude-code/marketplace.schema.json)
+3. Host open-source plugins with publicly viewable code
+4. Provide valid repository URLs for all plugins
 
-## Submit Your Plugin
+### How to Submit
 
-Have a plugin you'd like to share with the community? We'd love to include it!
-
-**To submit a plugin:**
-
-1. Fork this repository
-2. Edit `.claude-plugin/marketplace.json` and add your plugin entry
-3. Submit a Pull Request
-
-Your plugin entry should include:
+1. **Fork this repository**
+2. **Edit `.claude-plugin/marketplaces.json`** and add your marketplace entry:
 
 ```json
 {
-  "name": "your-plugin-name",
-  "source": "https://github.com/username/your-plugin-repo",
-  "description": "Brief description of what your plugin does",
-  "version": "1.0.0",
-  "author": "Your Name",
-  "license": "MIT",
-  "tags": ["relevant", "tags"]
+  "id": "unique-marketplace-id",
+  "name": "Your Marketplace Name",
+  "description": "Brief description of what your marketplace focuses on",
+  "owner": {
+    "name": "Your Name or Organization",
+    "url": "https://your-website.com"
+  },
+  "repository": "https://github.com/yourusername/your-marketplace-repo",
+  "manifestUrl": "https://raw.githubusercontent.com/yourusername/your-marketplace-repo/main/.claude-plugin/marketplace.json",
+  "tags": ["relevant", "tags", "here"],
+  "homepage": "https://your-marketplace-site.com",
+  "verified": false,
+  "addedAt": "2025-10-10"
 }
 ```
 
-### Plugin Sources
+3. **Submit a Pull Request**
 
-The `source` field supports multiple formats:
+### Marketplace Entry Fields
 
-- **GitHub repository**: `"username/repo"` or `"https://github.com/username/repo"`
-- **Git URL**: `"https://example.com/repo.git"`
-- **HTTP URL**: `"https://example.com/plugin.zip"`
+| Field | Required | Description |
+|-------|----------|-------------|
+| `id` | Yes | Unique identifier (lowercase, hyphens only) |
+| `name` | Yes | Display name for your marketplace |
+| `description` | Yes | Brief description (1-2 sentences) |
+| `owner.name` | Yes | Marketplace owner/maintainer name |
+| `owner.url` | No | Link to owner's website/profile |
+| `repository` | Yes | GitHub repository URL |
+| `manifestUrl` | Yes | Direct URL to your marketplace.json file |
+| `tags` | No | Array of relevant tags/categories |
+| `homepage` | No | Marketplace website (if different from repo) |
+| `verified` | No | Set to false (verification granted by maintainers) |
+| `addedAt` | Yes | Date added in YYYY-MM-DD format |
 
-See the [Plugin Sources](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#plugin-sources) documentation for more details.
+### Marketplace Manifest Format
 
-For complete schema documentation, see [Plugin Entry Schema](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#plugin-entries).
+Your repository's `.claude-plugin/marketplace.json` should follow this structure:
+
+```json
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "your-marketplace-name",
+  "owner": {
+    "name": "Your Name",
+    "url": "https://your-site.com"
+  },
+  "metadata": {
+    "description": "Your marketplace description",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "plugin-name",
+      "source": "username/plugin-repo",
+      "description": "Plugin description",
+      "version": "1.0.0",
+      "author": "Plugin Author",
+      "license": "MIT",
+      "tags": ["tag1", "tag2"]
+    }
+  ]
+}
+```
+
+See [Anthropic's documentation](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces) for the complete schema.
+
+## Create Your Own Marketplace
+
+Want to start your own specialized marketplace? Here's how:
+
+### 1. Create a Repository
+
+```bash
+mkdir my-claude-marketplace
+cd my-claude-marketplace
+git init
+mkdir .claude-plugin
+```
+
+### 2. Create Your Marketplace Manifest
+
+Create `.claude-plugin/marketplace.json`:
+
+```json
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "my-marketplace",
+  "owner": {
+    "name": "Your Name",
+    "url": "https://github.com/yourusername"
+  },
+  "metadata": {
+    "description": "A curated collection of [your focus area] plugins",
+    "version": "1.0.0"
+  },
+  "plugins": []
+}
+```
+
+### 3. Add Plugins
+
+Add plugins to your `plugins` array following the schema. See [Plugin Entry Schema](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#plugin-entries) for details.
+
+### 4. Push to GitHub
+
+```bash
+git add .
+git commit -m "Initial marketplace setup"
+git remote add origin https://github.com/yourusername/your-marketplace
+git push -u origin main
+```
+
+### 5. Submit to the Hub
+
+Follow the "Submit Your Marketplace" instructions above to list your marketplace in the hub.
+
+## For Plugin Developers
+
+If you want to get your plugin listed, you have two options:
+
+1. **Submit to an existing marketplace** - Find a marketplace that matches your plugin's category and submit a PR there
+2. **Create your own marketplace** - Follow the guide above and include your plugin
+
+Each marketplace has its own submission process and requirements, so check their individual guidelines.
+
+## Development
+
+Want to contribute to the hub itself?
+
+### Prerequisites
+- Node.js 20+
+- Yarn or npm
+
+### Setup
+
+```bash
+git clone https://github.com/joesaunderson/claude-code-marketplace.git
+cd claude-code-marketplace
+yarn install
+yarn dev
+```
+
+### Project Structure
+
+```
+.claude-plugin/
+  └── marketplaces.json    # Hub's marketplace listings
+app/
+  ├── page.tsx            # Homepage (marketplace grid)
+  ├── marketplace/[id]/   # Marketplace detail pages
+  └── about/              # About page
+components/
+  ├── MarketplaceCard.tsx # Marketplace display card
+  ├── PluginCard.tsx      # Plugin display card
+  └── ClientHome.tsx      # Client-side filtering
+lib/
+  └── github.ts           # GitHub API utilities
+types/
+  ├── marketplace.ts      # Marketplace types
+  └── plugin.ts          # Plugin types
+```
 
 ## Contributing
 
-Contributions are welcome! Whether you're submitting a plugin, fixing a bug, or improving documentation, we appreciate your help.
+Contributions are welcome! Whether you're:
+- Submitting a marketplace
+- Improving the hub
+- Fixing bugs
+- Enhancing documentation
 
-See [docs/development.md](docs/development.md) for development setup and technical details.
+Please open an issue or PR on GitHub.
 
 ## Important Notes
 
-This marketplace is a **directory service only**. We don't host plugin files - your plugin must be hosted in its own repository or accessible via a public URL. This marketplace simply provides a centralized registry to help users discover and install your plugin from its source.
+This hub is a **directory service only**. We:
+- ✅ List marketplaces and help users discover them
+- ✅ Dynamically fetch and display marketplace data
+- ✅ Provide a unified search and discovery experience
+- ❌ Don't host plugin files
+- ❌ Don't control marketplace contents
+- ❌ Don't verify individual plugins (marketplaces do that)
 
-When you submit a plugin, you're adding a reference to your plugin's location, not uploading the plugin itself.
+Each marketplace is responsible for:
+- Curating and reviewing their plugins
+- Maintaining plugin metadata
+- Ensuring code quality and security
+- Providing installation instructions
 
 ## License
 
 MIT
+
+## Links
+
+- [Hub Website](https://claudecodemarketplace.com)
+- [GitHub Repository](https://github.com/joesaunderson/claude-code-marketplace)
+- [Claude Code Plugins Documentation](https://www.anthropic.com/news/claude-code-plugins)
+- [Plugin Marketplace Schema](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces)

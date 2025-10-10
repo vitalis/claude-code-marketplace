@@ -2,12 +2,21 @@ import { PluginEntry } from '@/types/plugin';
 
 interface PluginCardProps {
   plugin: PluginEntry;
+  marketplaceName?: string;
 }
 
-export default function PluginCard({ plugin }: PluginCardProps) {
+export default function PluginCard({ plugin, marketplaceName }: PluginCardProps) {
   const authorName = typeof plugin.author === 'string'
     ? plugin.author
     : plugin.author?.name || 'Unknown';
+
+  // Combine tags and keywords, remove duplicates
+  const allLabels = [
+    ...(plugin.tags || []),
+    ...(plugin.keywords || [])
+  ].filter((label, index, array) =>
+    array.findIndex(l => l.toLowerCase() === label.toLowerCase()) === index
+  );
 
   // Validate URLs to prevent malicious links
   const validateUrl = (url: string | undefined): string | null => {
@@ -58,37 +67,39 @@ export default function PluginCard({ plugin }: PluginCardProps) {
           )}
         </div>
 
-        {plugin.tags && plugin.tags.length > 0 && (
+        {allLabels.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {plugin.tags.slice(0, 3).map((tag) => (
+            {allLabels.slice(0, 4).map((label) => (
               <span
-                key={tag}
+                key={label}
                 className="text-xs bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/40 dark:to-indigo-900/40 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full font-medium"
               >
-                {tag}
+                {label}
               </span>
             ))}
           </div>
         )}
 
         {/* Add to Claude Code command */}
-        <div className="mb-4 relative group/install">
-          <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Add to your Claude Code editor:</p>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg opacity-5 group-hover/install:opacity-10 transition-opacity" />
-          <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-3 font-mono text-xs overflow-x-auto">
-            <code className="text-green-400">
-              /plugin install {plugin.name}@claude-code-marketplace
-            </code>
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(`/plugin install ${plugin.name}@claude-code-marketplace`);
-              }}
-              className="absolute top-2 right-2 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-[10px] rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
-            >
-              Copy
-            </button>
+        {marketplaceName && (
+          <div className="mb-4 relative group/install">
+            <p className="text-[10px] uppercase tracking-wide text-gray-600 dark:text-gray-400 font-semibold mb-1">Step 2: Install Plugin</p>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg opacity-5 group-hover/install:opacity-10 transition-opacity" />
+            <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto">
+              <code className="text-green-400">
+                /plugin install {plugin.name}@{marketplaceName}
+              </code>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(`/plugin install ${plugin.name}@${marketplaceName}`);
+                }}
+                className="absolute top-1.5 right-1.5 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-[10px] rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+              >
+                Copy
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         {sourceUrl && (
           <div className="flex gap-3 pt-2 border-t border-gray-100 dark:border-gray-700">

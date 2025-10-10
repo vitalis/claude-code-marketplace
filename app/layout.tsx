@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = 'https://claudecodemarketplace.com';
-const siteName = 'Claude Code Marketplace';
-const siteDescription = 'Community marketplace for Claude Code plugins - Browse open-source extensions for Anthropic\'s Claude Code editor';
+const siteName = 'Claude Code Marketplace Hub';
+const siteDescription = 'The decentralized hub for discovering Claude Code plugin marketplaces - Browse multiple community-maintained plugin collections in one place';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     'Claude Code',
     'Claude Code plugins',
     'Claude Code marketplace',
+    'Claude Code hub',
+    'plugin marketplace hub',
     'Claude plugins',
     'AI code editor',
     'Claude extensions',
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
     'developer tools',
     'AI development tools',
     'Anthropic Claude',
+    'decentralized marketplace',
   ],
   authors: [{ name: 'Claude Code Community' }],
   creator: 'Claude Code Community',
