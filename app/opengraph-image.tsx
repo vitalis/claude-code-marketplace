@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 // Image metadata
-export const alt = 'Claude Code Marketplace';
+export const alt = 'Claude Code Plugin Marketplaces';
 export const size = {
   width: 1200,
   height: 630,
@@ -20,7 +20,7 @@ export default async function OgImage() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(to bottom right, #1e40af, #4338ca)',
+          background: '#faf9f5',
           fontSize: 60,
           fontWeight: 700,
         }}
@@ -31,7 +31,6 @@ export default async function OgImage() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            color: 'white',
             padding: '40px',
             textAlign: 'center',
           }}
@@ -40,21 +39,19 @@ export default async function OgImage() {
             style={{
               fontSize: 80,
               marginBottom: 20,
-              background: 'linear-gradient(to right, #60a5fa, #a78bfa)',
-              backgroundClip: 'text',
-              color: 'transparent',
+              color: '#d97757',
             }}
           >
-            Claude Code Marketplace
+            Claude Code Plugin Marketplaces
           </div>
           <div
             style={{
               fontSize: 40,
-              color: '#e0e7ff',
+              color: '#141413',
               maxWidth: 900,
             }}
           >
-            Discover and install plugins to enhance your Claude Code experience
+            Discover and install plugin marketplaces to enhance your Claude Code experience
           </div>
         </div>
       </div>

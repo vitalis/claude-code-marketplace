@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 const siteUrl = 'https://claudecodemarketplace.com';
-const siteName = 'Claude Code Marketplace Hub';
+const siteName = 'Claude Code Plugin Marketplaces';
 const siteDescription = 'The decentralized hub for discovering Claude Code plugin marketplaces - Browse multiple community-maintained plugin collections in one place';
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 {
   "hub": {
-    "name": "Claude Code Marketplace Hub",
+    "name": "Claude Code Plugin Marketplaces",
     "description": "The central hub for discovering Claude Code plugin marketplaces",
     "version": "2.0.0"
   },

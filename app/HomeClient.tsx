@@ -188,7 +188,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                         Plugins ({filteredPlugins.length})
                       </h2>
                       <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-[#d97757]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span>Install marketplace first, then plugin</span>
@@ -198,25 +198,25 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                       {filteredPlugins.map(({ plugin, marketplace }) => (
                         <div key={`${marketplace.id}-${plugin.name}`} className="flex flex-col gap-3">
                           {/* Marketplace Info Card */}
-                          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 border-2 border-indigo-200 dark:border-indigo-800 rounded-xl p-3">
+                          <div className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950/30 dark:to-amber-950/30 border-2 border-[#d97757] dark:border-[#d97757]/60 rounded-xl p-3">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4 text-[#d97757]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
-                                <span className="text-sm font-semibold text-indigo-900 dark:text-indigo-200">
+                                <span className="text-sm font-semibold text-[#d97757] dark:text-[#d97757]">
                                   From: {marketplace.name}
                                 </span>
                               </div>
                               <a
                                 href={`/marketplace/${marketplace.id}`}
-                                className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline"
+                                className="text-xs text-[#d97757] hover:underline"
                               >
                                 View →
                               </a>
                             </div>
                             <div className="relative group/install">
-                              <p className="text-[10px] uppercase tracking-wide text-indigo-700 dark:text-indigo-300 font-semibold mb-1">Step 1: Install Marketplace</p>
+                              <p className="text-[10px] uppercase tracking-wide text-[#c96647] dark:text-[#d97757] font-semibold mb-1">Step 1: Install Marketplace</p>
                               <div className="relative bg-[#f0eee6] dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto border border-[#e8e6dc] dark:border-gray-900">
                                 <code className="text-[#141413] dark:text-green-400">
                                   /plugin marketplace add {marketplace.repository.replace('https://github.com/', '')}

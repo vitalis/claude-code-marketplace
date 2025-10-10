@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: MarketplacePageProps) {
   }
 
   return {
-    title: `${entry.name} - Claude Code Marketplace Hub`,
+    title: `${entry.name} - Claude Code Plugin Marketplaces`,
     description: entry.description,
   };
 }

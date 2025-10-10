@@ -106,7 +106,7 @@ export default function PluginCard({ plugin, marketplaceName }: PluginCardProps)
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors inline-flex items-center gap-1"
+              className="text-sm text-[#d97757] hover:text-[#c96647] font-medium transition-colors inline-flex items-center gap-1"
             >
               {isGitHub ? (
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

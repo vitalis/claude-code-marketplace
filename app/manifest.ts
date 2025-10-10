@@ -2,13 +2,13 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Claude Code Marketplace',
-    short_name: 'Claude Marketplace',
-    description: 'Community marketplace for Claude Code plugins',
+    name: 'Claude Code Plugin Marketplaces',
+    short_name: 'Claude Plugins',
+    description: 'Decentralized hub for Claude Code plugin marketplaces',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#2563eb',
+    background_color: '#faf9f5',
+    theme_color: '#d97757',
     icons: [
       {
         src: '/icon-192.png',
