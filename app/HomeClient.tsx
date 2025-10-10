@@ -2,10 +2,11 @@
 
 import { useState, useMemo } from 'react';
 import { FetchedMarketplace } from '@/types/marketplace';
-import { Plugin } from '@/types/plugin';
+import { PluginEntry } from '@/types/plugin';
 import MarketplaceCard from '@/components/MarketplaceCard';
 import PluginCard from '@/components/PluginCard';
 import SearchBar from '@/components/SearchBar';
+import ThemeToggle from '@/components/ThemeToggle';
 import marketplacesData from '@/.claude-plugin/marketplaces.json';
 
 const hub = marketplacesData as { hub: { name: string; description: string; version: string; }; };
@@ -44,7 +45,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
     });
 
     // Search plugins across all marketplaces
-    const matchedPlugins: Array<{ plugin: Plugin; marketplace: FetchedMarketplace }> = [];
+    const matchedPlugins: Array<{ plugin: PluginEntry; marketplace: FetchedMarketplace }> = [];
 
     marketplaces.forEach((marketplace) => {
       if (marketplace.manifest?.plugins) {
@@ -72,18 +73,17 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
   }, [searchQuery, marketplaces]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 flex flex-col">
+    <div className="min-h-screen bg-[#F7F5F2] dark:bg-[#0A0A0A] flex flex-col">
       {/* Announcement Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <div className="bg-[#1E1E1E] dark:bg-[#141414] text-white border-b border-gray-800 dark:border-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center justify-center gap-2 text-sm sm:text-base">
-            <span className="font-semibold">🎉 New!</span>
-            <span>Claude Code Plugins are here.</span>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <span className="font-medium">Claude Code Plugins are here.</span>
             <a
               href="https://www.anthropic.com/news/claude-code-plugins?utm_source=claudecodemarketplace&utm_medium=banner&utm_campaign=plugin_launch"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-blue-100 transition-colors font-medium"
+              className="underline hover:text-gray-300 transition-colors font-medium"
             >
               Learn more →
             </a>
@@ -91,33 +91,30 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
         </div>
       </div>
 
-      <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm" role="banner">
+      <header className="bg-white dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-gray-800" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
             <div className="flex-1">
               <div className="flex items-center gap-3 flex-wrap">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-900 dark:text-white">
                   Claude Code Marketplace Hub
                 </h1>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-medium">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                  Hub
-                </span>
               </div>
-              <p className="mt-2 text-sm sm:text-base text-gray-700 dark:text-gray-300" role="doc-subtitle">
+              <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400" role="doc-subtitle">
                 {hub.hub.description}
               </p>
             </div>
-            <a
-              href="https://github.com/joesaunderson/claude-code-marketplace/compare"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm sm:text-base rounded-xl font-medium transition-all whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              Submit Marketplace
-            </a>
+            <div className="flex items-center gap-3">
+              <ThemeToggle />
+              <a
+                href="https://github.com/joesaunderson/claude-code-marketplace/compare"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-[#1E1E1E] hover:bg-[#2A2A2A] dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
+              >
+                Submit Marketplace
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -126,12 +123,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
         {marketplaces.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 sm:py-20">
             <div className="text-center max-w-md px-4">
-              <div className="mb-6 inline-block p-4 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-2xl">
-                <svg className="w-16 h-16 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </div>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-2xl font-medium text-gray-900 dark:text-white mb-3 sm:mb-4">
                 No Marketplaces Yet
               </h2>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
@@ -141,7 +133,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                 href="https://github.com/joesaunderson/claude-code-marketplace/compare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm sm:text-base rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                className="inline-block px-5 py-2.5 bg-[#1E1E1E] hover:bg-[#2A2A2A] dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black text-sm font-medium transition-colors rounded-lg"
               >
                 Submit Your Marketplace
               </a>
@@ -261,19 +253,16 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
         )}
       </main>
 
-      <footer className="mt-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <footer className="mt-auto bg-white dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-gray-800" role="contentinfo">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-center text-gray-600 dark:text-gray-300 text-sm mb-2">
-              Claude Code Marketplace Hub - Discover plugin marketplaces
-            </p>
-            <p className="text-center text-gray-500 dark:text-gray-400 text-xs mb-4">
+            <p className="text-center text-gray-600 dark:text-gray-400 text-sm mb-4">
               A decentralized hub connecting you to Claude Code plugin marketplaces
             </p>
-            <nav className="flex justify-center gap-6 text-xs text-gray-500 dark:text-gray-400" aria-label="Footer navigation">
-              <a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About & Safety</a>
-              <a href="https://github.com/joesaunderson/claude-code-marketplace" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
-              <a href="https://www.anthropic.com/news/claude-code-plugins" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">About Claude Code</a>
+            <nav className="flex justify-center gap-6 text-sm text-gray-600 dark:text-gray-400" aria-label="Footer navigation">
+              <a href="/about" className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors">About & Safety</a>
+              <a href="https://github.com/joesaunderson/claude-code-marketplace" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors">GitHub</a>
+              <a href="https://www.anthropic.com/news/claude-code-plugins" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors">About Claude Code</a>
             </nav>
           </div>
         </div>
