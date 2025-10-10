@@ -32,7 +32,14 @@ export default function AnimatedHeader() {
     const interval = setInterval(() => {
       setIsVisible(false);
       setTimeout(() => {
-        setCurrentVerb((prev) => (prev + 1) % VERBS.length);
+        setCurrentVerb((prev) => {
+          let next = Math.floor(Math.random() * VERBS.length);
+          // Ensure we don't get the same verb twice in a row
+          while (next === prev && VERBS.length > 1) {
+            next = Math.floor(Math.random() * VERBS.length);
+          }
+          return next;
+        });
         setIsVisible(true);
       }, 300);
     }, 2500);
