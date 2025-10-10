@@ -16,17 +16,16 @@ export default function MarketplaceInstallBox({ repositoryUrl }: MarketplaceInst
       <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
         Run this command in Claude Code to add all plugins from this marketplace:
       </p>
-      <div className="relative group">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-10 group-hover:opacity-20 transition-opacity" />
-        <div className="relative bg-gray-900 dark:bg-gray-950 rounded-xl p-4 font-mono text-sm overflow-x-auto">
-          <code className="text-green-400">
+      <div className="relative">
+        <div className="relative bg-[#f0eee6] dark:bg-gray-950 rounded-xl p-4 font-mono text-sm overflow-x-auto border border-[#e8e6dc] dark:border-gray-900">
+          <code className="text-[#141413] dark:text-green-400">
             {command}
           </code>
           <button
             onClick={() => {
               navigator.clipboard.writeText(command);
             }}
-            className="absolute top-3 right-3 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+            className="absolute top-3 right-3 px-3 py-1.5 bg-[#e8e6dc] hover:bg-[#dbd9cd] dark:bg-gray-800 dark:hover:bg-gray-700 text-[#141413] dark:text-gray-300 hover:text-black dark:hover:text-white text-xs rounded transition-colors border border-[#dbd9cd] dark:border-gray-700"
           >
             Copy
           </button>

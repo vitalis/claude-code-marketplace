@@ -104,8 +104,8 @@ export default function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
           {/* Installation command */}
           <div className="mb-4 relative">
             <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Add marketplace:</p>
-            <div className="relative bg-[#1E1E1E] dark:bg-[#0A0A0A] rounded-lg p-3 font-mono text-xs overflow-x-auto border border-gray-800 dark:border-gray-900">
-              <code className="text-green-400">
+            <div className="relative bg-[#f0eee6] dark:bg-[#0A0A0A] rounded-lg p-3 font-mono text-xs overflow-x-auto border border-[#e8e6dc] dark:border-gray-900">
+              <code className="text-[#141413] dark:text-green-400">
                 /plugin marketplace add {repoUrl ? repoUrl.replace('https://github.com/', '') : id}
               </code>
               <button
@@ -113,7 +113,7 @@ export default function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
                   const command = `/plugin marketplace add ${repoUrl ? repoUrl.replace('https://github.com/', '') : id}`;
                   navigator.clipboard.writeText(command);
                 }}
-                className="absolute top-2 right-2 px-2 py-1 bg-[#2A2A2A] hover:bg-[#3A3A3A] text-gray-300 hover:text-white text-[10px] rounded transition-colors"
+                className="absolute top-2 right-2 px-2 py-1 bg-[#e8e6dc] hover:bg-[#dbd9cd] dark:bg-[#2A2A2A] dark:hover:bg-[#3A3A3A] text-[#141413] dark:text-gray-300 hover:text-black dark:hover:text-white text-[10px] rounded transition-colors"
               >
                 Copy
               </button>
@@ -124,7 +124,7 @@ export default function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
             {!error && (
               <Link
                 href={`/marketplace/${id}`}
-                className="flex-1 text-center px-4 py-2 bg-[#1E1E1E] hover:bg-[#2A2A2A] dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black text-sm rounded-lg font-medium transition-colors"
+                className="flex-1 text-center px-4 py-2 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm rounded-lg font-medium transition-colors"
               >
                 View Plugins →
               </Link>

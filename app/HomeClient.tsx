@@ -73,7 +73,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
   }, [searchQuery, marketplaces]);
 
   return (
-    <div className="min-h-screen bg-[#F7F5F2] dark:bg-[#0A0A0A] flex flex-col">
+    <div className="min-h-screen bg-[#faf9f5] dark:bg-[#0A0A0A] flex flex-col">
       {/* Announcement Banner */}
       <div className="bg-[#1E1E1E] dark:bg-[#141414] text-white border-b border-gray-800 dark:border-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -91,7 +91,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
         </div>
       </div>
 
-      <header className="bg-white dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-gray-800" role="banner">
+      <header className="bg-[#f0eee6] dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-gray-800" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
             <div className="flex-1">
@@ -110,7 +110,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                 href="https://github.com/joesaunderson/claude-code-marketplace/compare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-[#1E1E1E] hover:bg-[#2A2A2A] dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
+                className="inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors whitespace-nowrap rounded-lg"
               >
                 Submit Marketplace
               </a>
@@ -133,7 +133,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                 href="https://github.com/joesaunderson/claude-code-marketplace/compare"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-5 py-2.5 bg-[#1E1E1E] hover:bg-[#2A2A2A] dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black text-sm font-medium transition-colors rounded-lg"
+                className="inline-block px-5 py-2.5 bg-[#d97757] hover:bg-[#c96647] text-white dark:bg-transparent dark:border-2 dark:border-[#d97757] dark:text-[#d97757] dark:hover:bg-[#d97757]/10 dark:hover:border-[#c96647] text-sm font-medium transition-colors rounded-lg"
               >
                 Submit Your Marketplace
               </a>
@@ -225,15 +225,15 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
                             </div>
                             <div className="relative group/install">
                               <p className="text-[10px] uppercase tracking-wide text-indigo-700 dark:text-indigo-300 font-semibold mb-1">Step 1: Install Marketplace</p>
-                              <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto">
-                                <code className="text-green-400">
+                              <div className="relative bg-[#f0eee6] dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto border border-[#e8e6dc] dark:border-gray-900">
+                                <code className="text-[#141413] dark:text-green-400">
                                   /plugin marketplace add {marketplace.repository.replace('https://github.com/', '')}
                                 </code>
                                 <button
                                   onClick={() => {
                                     navigator.clipboard.writeText(`/plugin marketplace add ${marketplace.repository.replace('https://github.com/', '')}`);
                                   }}
-                                  className="absolute top-1.5 right-1.5 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-[10px] rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+                                  className="absolute top-1.5 right-1.5 px-2 py-1 bg-[#e8e6dc] hover:bg-[#dbd9cd] dark:bg-gray-800 dark:hover:bg-gray-700 text-[#141413] dark:text-gray-300 hover:text-black dark:hover:text-white text-[10px] rounded transition-colors border border-[#dbd9cd] dark:border-gray-700"
                                 >
                                   Copy
                                 </button>
@@ -253,7 +253,7 @@ export default function HomeClient({ marketplaces }: HomeClientProps) {
         )}
       </main>
 
-      <footer className="mt-auto bg-white dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-gray-800" role="contentinfo">
+      <footer className="mt-auto bg-[#f0eee6] dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-gray-800" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-center text-gray-600 dark:text-gray-400 text-sm mb-4">

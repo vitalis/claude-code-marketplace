@@ -84,16 +84,15 @@ export default function PluginCard({ plugin, marketplaceName }: PluginCardProps)
         {marketplaceName && (
           <div className="mb-4 relative group/install">
             <p className="text-[10px] uppercase tracking-wide text-gray-600 dark:text-gray-400 font-semibold mb-1">Step 2: Install Plugin</p>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg opacity-5 group-hover/install:opacity-10 transition-opacity" />
-            <div className="relative bg-gray-900 dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto">
-              <code className="text-green-400">
+            <div className="relative bg-[#f0eee6] dark:bg-gray-950 rounded-lg p-2 font-mono text-xs overflow-x-auto border border-[#e8e6dc] dark:border-gray-900">
+              <code className="text-[#141413] dark:text-green-400">
                 /plugin install {plugin.name}@{marketplaceName}
               </code>
               <button
                 onClick={() => {
                   navigator.clipboard.writeText(`/plugin install ${plugin.name}@${marketplaceName}`);
                 }}
-                className="absolute top-1.5 right-1.5 px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-[10px] rounded transition-all hover:scale-105 border border-gray-700 hover:border-gray-600"
+                className="absolute top-1.5 right-1.5 px-2 py-1 bg-[#e8e6dc] hover:bg-[#dbd9cd] dark:bg-gray-800 dark:hover:bg-gray-700 text-[#141413] dark:text-gray-300 hover:text-black dark:hover:text-white text-[10px] rounded transition-colors border border-[#dbd9cd] dark:border-gray-700"
               >
                 Copy
               </button>
