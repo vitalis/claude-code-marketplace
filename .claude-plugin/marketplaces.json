@@ -94,6 +94,21 @@
       "homepage": "https://github.com/AgiFlow/aicode-toolkit",
       "verified": false,
       "addedAt": "2025-10-11"
+    },
+    {
+      "id": "imaginepro-mcp-server",
+      "name": "ImaginePro MCP Server",
+      "description": "MCP server plugins and integrations for Claude Code",
+      "owner": {
+        "name": "imaginpro",
+        "url": "https://github.com/imaginpro"
+      },
+      "repository": "https://github.com/imaginpro/imaginepro-mcp-server",
+      "manifestUrl": "https://raw.githubusercontent.com/imaginpro/imaginepro-mcp-server/main/.claude-plugin/marketplace.json",
+      "tags": ["mcp", "server", "integrations"],
+      "homepage": "https://github.com/imaginpro/imaginepro-mcp-server",
+      "verified": false,
+      "addedAt": "2025-10-11"
     }
   ]
 }
