@@ -79,6 +79,21 @@
       "homepage": "https://github.com/obra/superpowers-marketplace",
       "verified": false,
       "addedAt": "2025-10-11"
+    },
+    {
+      "id": "aicode-toolkit",
+      "name": "AI Code Toolkit",
+      "description": "AI-powered coding tools and utilities for Claude Code",
+      "owner": {
+        "name": "AgiFlow",
+        "url": "https://github.com/AgiFlow"
+      },
+      "repository": "https://github.com/AgiFlow/aicode-toolkit",
+      "manifestUrl": "https://raw.githubusercontent.com/AgiFlow/aicode-toolkit/main/.claude-plugin/marketplace.json",
+      "tags": ["ai", "toolkit", "utilities"],
+      "homepage": "https://github.com/AgiFlow/aicode-toolkit",
+      "verified": false,
+      "addedAt": "2025-10-11"
     }
   ]
 }
