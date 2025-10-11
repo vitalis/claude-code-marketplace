@@ -109,6 +109,21 @@
       "homepage": "https://github.com/imaginpro/imaginepro-mcp-server",
       "verified": false,
       "addedAt": "2025-10-11"
+    },
+    {
+      "id": "exa-mcp-server",
+      "name": "Exa MCP Server",
+      "description": "Exa Labs MCP server plugins and tools for Claude Code",
+      "owner": {
+        "name": "exa-labs",
+        "url": "https://github.com/exa-labs"
+      },
+      "repository": "https://github.com/exa-labs/exa-mcp-server",
+      "manifestUrl": "https://raw.githubusercontent.com/exa-labs/exa-mcp-server/main/.claude-plugin/marketplace.json",
+      "tags": ["mcp", "exa", "search"],
+      "homepage": "https://github.com/exa-labs/exa-mcp-server",
+      "verified": false,
+      "addedAt": "2025-10-11"
     }
   ]
 }
