@@ -36,6 +36,21 @@
       "addedAt": "2025-10-10"
     },
     {
+      "id": "docker-claude-plugins",
+      "name": "Docker Claude Plugins",
+      "description": "Official Docker plugins and integrations for Claude Code",
+      "owner": {
+        "name": "Docker",
+        "url": "https://www.docker.com"
+      },
+      "repository": "https://github.com/docker/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/docker/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": ["docker", "containers", "official"],
+      "homepage": "https://github.com/docker/claude-plugins",
+      "verified": true,
+      "addedAt": "2025-10-11"
+    },
+    {
       "id": "every-marketplace",
       "name": "Every Marketplace",
       "description": "Claude Code plugins and tools from Every Inc",
@@ -137,6 +152,51 @@
       "manifestUrl": "https://raw.githubusercontent.com/jeffh/claude-plugins/main/.claude-plugin/marketplace.json",
       "tags": ["plugins", "extensions", "tools"],
       "homepage": "https://github.com/jeffh/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-11"
+    },
+    {
+      "id": "ruvnet-claude-flow",
+      "name": "Claude Flow",
+      "description": "Workflow automation and flow-based plugins for Claude Code",
+      "owner": {
+        "name": "ruvnet",
+        "url": "https://github.com/ruvnet"
+      },
+      "repository": "https://github.com/ruvnet/claude-flow",
+      "manifestUrl": "https://raw.githubusercontent.com/ruvnet/claude-flow/main/.claude-plugin/marketplace.json",
+      "tags": ["workflow", "automation", "flow"],
+      "homepage": "https://github.com/ruvnet/claude-flow",
+      "verified": false,
+      "addedAt": "2025-10-11"
+    },
+    {
+      "id": "classmethod-tsumiki",
+      "name": "Tsumiki",
+      "description": "Claude Code plugins and tools from Classmethod",
+      "owner": {
+        "name": "classmethod",
+        "url": "https://github.com/classmethod"
+      },
+      "repository": "https://github.com/classmethod/tsumiki",
+      "manifestUrl": "https://raw.githubusercontent.com/classmethod/tsumiki/main/.claude-plugin/marketplace.json",
+      "tags": ["tools", "utilities", "classmethod"],
+      "homepage": "https://github.com/classmethod/tsumiki",
+      "verified": false,
+      "addedAt": "2025-10-11"
+    },
+    {
+      "id": "udecode-dotai",
+      "name": "Dot AI",
+      "description": "AI-powered development tools and plugins from Udecode",
+      "owner": {
+        "name": "udecode",
+        "url": "https://github.com/udecode"
+      },
+      "repository": "https://github.com/udecode/dotai",
+      "manifestUrl": "https://raw.githubusercontent.com/udecode/dotai/main/.claude-plugin/marketplace.json",
+      "tags": ["ai", "development", "tools"],
+      "homepage": "https://github.com/udecode/dotai",
       "verified": false,
       "addedAt": "2025-10-11"
     }
