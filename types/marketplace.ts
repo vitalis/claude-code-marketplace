@@ -44,4 +44,6 @@ export interface FetchedMarketplace extends MarketplaceEntry {
   pluginCount?: number;
   lastFetched?: string;
   error?: string;
+  stars?: number;
+  lastUpdated?: string;
 }
