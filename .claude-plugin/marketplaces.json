@@ -124,6 +124,21 @@
       "homepage": "https://github.com/exa-labs/exa-mcp-server",
       "verified": false,
       "addedAt": "2025-10-11"
+    },
+    {
+      "id": "jeffh-claude-plugins",
+      "name": "Jeffh Claude Plugins",
+      "description": "Claude Code plugins and extensions by jeffh",
+      "owner": {
+        "name": "jeffh",
+        "url": "https://github.com/jeffh"
+      },
+      "repository": "https://github.com/jeffh/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/jeffh/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": ["plugins", "extensions", "tools"],
+      "homepage": "https://github.com/jeffh/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-11"
     }
   ]
 }
