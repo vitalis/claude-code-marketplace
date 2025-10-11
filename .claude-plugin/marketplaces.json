@@ -104,7 +104,7 @@
         "url": "https://github.com/imaginpro"
       },
       "repository": "https://github.com/imaginpro/imaginepro-mcp-server",
-      "manifestUrl": "https://raw.githubusercontent.com/imaginpro/imaginepro-mcp-server/main/.claude-plugin/marketplace.json",
+      "manifestUrl": "https://raw.githubusercontent.com/imaginpro/imaginepro-mcp-server/master/.claude-plugin/marketplace.json",
       "tags": ["mcp", "server", "integrations"],
       "homepage": "https://github.com/imaginpro/imaginepro-mcp-server",
       "verified": false,
