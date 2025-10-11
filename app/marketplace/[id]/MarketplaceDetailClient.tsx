@@ -6,6 +6,7 @@ import PluginCard from '@/components/PluginCard';
 import SearchBar from '@/components/SearchBar';
 import { FetchedMarketplace } from '@/types/marketplace';
 import MarketplaceInstallBox from '@/components/MarketplaceInstallBox';
+import MarketplaceStructuredData from '@/components/MarketplaceStructuredData';
 
 interface MarketplaceDetailClientProps {
   marketplace: FetchedMarketplace | null;
@@ -61,6 +62,8 @@ export default function MarketplaceDetailClient({ marketplace, marketplaceId }: 
 
   return (
     <div className="min-h-screen flex flex-col bg-[#faf9f5] dark:bg-[#0A0A0A]">
+      <MarketplaceStructuredData marketplace={marketplace} marketplaceId={marketplaceId} />
+
       <header className="bg-[#f0eee6] dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <Link
