@@ -21,21 +21,6 @@
       "addedAt": "2025-10-10"
     },
     {
-      "id": "claude-code-templates",
-      "name": "Claude Code Templates",
-      "description": "A collection of code templates and snippets for Claude Code",
-      "owner": {
-        "name": "davila7",
-        "url": "https://github.com/davila7"
-      },
-      "repository": "https://github.com/davila7/claude-code-templates",
-      "manifestUrl": "https://raw.githubusercontent.com/davila7/claude-code-templates/main/.claude-plugin/marketplace.json",
-      "tags": ["templates", "snippets", "productivity"],
-      "homepage": "https://github.com/davila7/claude-code-templates",
-      "verified": false,
-      "addedAt": "2025-10-10"
-    },
-    {
       "id": "docker-claude-plugins",
       "name": "Docker Claude Plugins",
       "description": "Official Docker plugins and integrations for Claude Code",
@@ -49,6 +34,21 @@
       "homepage": "https://github.com/docker/claude-plugins",
       "verified": true,
       "addedAt": "2025-10-11"
+    },
+    {
+      "id": "claude-code-templates",
+      "name": "Claude Code Templates",
+      "description": "A collection of code templates and snippets for Claude Code",
+      "owner": {
+        "name": "davila7",
+        "url": "https://github.com/davila7"
+      },
+      "repository": "https://github.com/davila7/claude-code-templates",
+      "manifestUrl": "https://raw.githubusercontent.com/davila7/claude-code-templates/main/.claude-plugin/marketplace.json",
+      "tags": ["templates", "snippets", "productivity"],
+      "homepage": "https://github.com/davila7/claude-code-templates",
+      "verified": false,
+      "addedAt": "2025-10-10"
     },
     {
       "id": "every-marketplace",
