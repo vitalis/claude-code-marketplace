@@ -3,6 +3,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: 'About & Safety',
   description: 'Learn about Claude Code Plugins directory, how it works, and our safety practices for discovering and installing extensions.',
+  alternates: {
+    types: {
+      'text/markdown': 'https://claudecodemarketplace.com/markdown/about',
+    },
+  },
 };
 
 export default function AboutPage() {

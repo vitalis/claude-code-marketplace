@@ -44,6 +44,9 @@ export async function generateMetadata({ params }: MarketplacePageProps) {
     publisher: 'Claude Code Plugins',
     alternates: {
       canonical: pageUrl,
+      types: {
+        'text/markdown': `${baseUrl}/markdown/marketplace/${params.id}`,
+      },
     },
     openGraph: {
       type: 'website',
