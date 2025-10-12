@@ -314,7 +314,7 @@
         "url": "https://github.com/cexll"
       },
       "repository": "https://github.com/cexll/myclaude",
-      "manifestUrl": "https://raw.githubusercontent.com/cexll/myclaude/main/.claude-plugin/marketplace.json",
+      "manifestUrl": "https://raw.githubusercontent.com/cexll/myclaude/master/.claude-plugin/marketplace.json",
       "tags": ["plugins", "tools", "community"],
       "homepage": "https://github.com/cexll/myclaude",
       "verified": false,
@@ -329,7 +329,7 @@
         "url": "https://github.com/abagames"
       },
       "repository": "https://github.com/abagames/slash-criticalthink",
-      "manifestUrl": "https://raw.githubusercontent.com/abagames/slash-criticalthink/main/.claude-plugin/marketplace.json",
+      "manifestUrl": "https://raw.githubusercontent.com/abagames/slash-criticalthink/master/.claude-plugin/marketplace.json",
       "tags": ["slash-commands", "thinking", "productivity", "analysis", "reasoning"],
       "homepage": "https://github.com/abagames/slash-criticalthink",
       "verified": false,
