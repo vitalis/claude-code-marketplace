@@ -7,7 +7,7 @@
   "marketplaces": [
     {
       "id": "1broseidon-marketplace",
-      "name": "Curated collection of Claude Code plugins",
+      "name": "1broseidon/marketplace",
       "description": "Curated collection of Claude Code plugins for fullstack development teams",
       "owner": {
         "name": "1broseidon",
@@ -24,7 +24,7 @@
     },
     {
       "id": "agents-marketplace",
-      "name": "Agents Marketplace",
+      "name": "wshobson/agents",
       "description": "Custom agents and automation plugins for Claude Code",
       "owner": {
         "name": "wshobson",
@@ -48,7 +48,7 @@
     },
     {
       "id": "aicode-toolkit",
-      "name": "AI Code Toolkit",
+      "name": "AgiFlow/aicode-toolkit",
       "description": "AI-powered coding tools and utilities for Claude Code",
       "owner": {
         "name": "AgiFlow",
@@ -69,7 +69,7 @@
     },
     {
       "id": "aidenestelle-aidens-claude-code-marketplace",
-      "name": "Aidens Claude Code Marketplace",
+      "name": "aidenestelle/Aidens-claude-code-marketplace",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Aidenestelle",
@@ -86,7 +86,7 @@
     },
     {
       "id": "aki77-claude-plugins",
-      "name": "Claude Plugins",
+      "name": "aki77/claude-plugins",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Aki77",
@@ -103,7 +103,7 @@
     },
     {
       "id": "akkomar-mozdata-claude-plugin",
-      "name": "Mozdata Claude Plugin",
+      "name": "akkomar/mozdata-claude-plugin",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Akkomar",
@@ -120,7 +120,7 @@
     },
     {
       "id": "alekspetrov-jitd-plugin",
-      "name": "JITD",
+      "name": "alekspetrov/jitd-plugin",
       "description": "JITD - Just-In-Time Documentation plugin marketplace",
       "owner": {
         "name": "Alekspetrov",
@@ -138,7 +138,7 @@
     },
     {
       "id": "allex-znews-cc-workflow-plugin",
-      "name": "Cc Workflow Plugin",
+      "name": "allex-znews/cc-workflow-plugin",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Allex Znews",
@@ -155,7 +155,7 @@
     },
     {
       "id": "amondnet-claude-plugins",
-      "name": "Claude Plugins",
+      "name": "amondnet/claude-plugins",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Amondnet",
@@ -172,7 +172,7 @@
     },
     {
       "id": "ananddtyagi-marketplace",
-      "name": "Anand Tyagi Marketplace",
+      "name": "ananddtyagi/claude-code-marketplace",
       "description": "Claude Code marketplace by Anand Tyagi",
       "owner": {
         "name": "ananddtyagi",
@@ -190,8 +190,25 @@
       "addedAt": "2025-10-12"
     },
     {
+      "id": "animalzinc-claude-plugins",
+      "name": "animalzinc/claude-plugins",
+      "description": "Official Animalz Claude Code plugins for content marketing workflows",
+      "owner": {
+        "name": "Animalzinc",
+        "url": "https://github.com/animalzinc"
+      },
+      "repository": "https://github.com/animalzinc/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/animalzinc/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "marketing"
+      ],
+      "homepage": "https://github.com/animalzinc/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "anthropic-claude-code",
-      "name": "Anthropic Claude Code",
+      "name": "anthropics/claude-code",
       "description": "Official marketplace from Anthropic with curated plugins for Claude Code",
       "owner": {
         "name": "Anthropic",
@@ -215,7 +232,7 @@
     },
     {
       "id": "anthropics-claude-claude-code",
-      "name": "Bundled plugins",
+      "name": "anthropics-claude/claude-code",
       "description": "Bundled plugins for Claude Code including Agent SDK development tools, PR review toolkit, and commit workflows",
       "owner": {
         "name": "Anthropics Claude",
@@ -233,8 +250,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "anthropics-skills",
+      "name": "anthropics/skills",
+      "description": "Anthropic example skills",
+      "owner": {
+        "name": "Anthropics",
+        "url": "https://github.com/anthropics"
+      },
+      "repository": "https://github.com/anthropics/skills",
+      "manifestUrl": "https://raw.githubusercontent.com/anthropics/skills/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/anthropics/skills",
+      "verified": true,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "asdfghoney-rdr",
-      "name": "RDR",
+      "name": "ASDFGHoney/RDR",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "ASDFGHoney",
@@ -251,7 +285,7 @@
     },
     {
       "id": "atsuki02-my-claude-plugins",
-      "name": "My Claude Plugins",
+      "name": "Atsuki02/my-claude-plugins",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Atsuki02",
@@ -268,7 +302,7 @@
     },
     {
       "id": "atxtechbro-dotfiles",
-      "name": "AI",
+      "name": "atxtechbro/dotfiles",
       "description": "AI-orchestration dotfiles for developers who want leverage. Parallelize agents, enforce principles, and self-heal your stack for 100x throughput. Built to version the AI era.",
       "owner": {
         "name": "Atxtechbro",
@@ -285,7 +319,7 @@
     },
     {
       "id": "avaloki108-claude-flow-web3",
-      "name": "Enterprise AI agent orchestration marketplace",
+      "name": "avaloki108/claude-flow----web3",
       "description": "Enterprise AI agent orchestration marketplace for Claude Code",
       "owner": {
         "name": "Avaloki108",
@@ -302,7 +336,7 @@
     },
     {
       "id": "avxkim-personal-marketplace",
-      "name": "Personal Marketplace",
+      "name": "avxkim/personal-marketplace",
       "description": "Personal Claude Code marketplace",
       "owner": {
         "name": "Avxkim",
@@ -319,7 +353,7 @@
     },
     {
       "id": "aws-solutions-library-samples-guidance-for-claude-code-with-amazon-bedrock",
-      "name": "Production",
+      "name": "aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock",
       "description": "Production-ready plugins for Claude Code: agents, hooks, and workflows",
       "owner": {
         "name": "Aws Solutions Library Samples",
@@ -343,7 +377,7 @@
     },
     {
       "id": "balabis-claude-plugins",
-      "name": "Claude Code plugins",
+      "name": "balabis/claude-plugins",
       "description": "Claude Code plugins for verification and development workflows",
       "owner": {
         "name": "Balabis",
@@ -360,8 +394,42 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "balabis-plugins",
+      "name": "balabis/plugins",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Balabis",
+        "url": "https://github.com/balabis"
+      },
+      "repository": "https://github.com/balabis/plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/balabis/plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/balabis/plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "bandofai-plugteca",
+      "name": "bandofai/plugteca",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Bandofai",
+        "url": "https://github.com/bandofai"
+      },
+      "repository": "https://github.com/bandofai/plugteca",
+      "manifestUrl": "https://raw.githubusercontent.com/bandofai/plugteca/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/bandofai/plugteca",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "bartolli-codanna-cc-plugin",
-      "name": "Codanna Cc Plugin",
+      "name": "bartolli/codanna-cc-plugin",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Bartolli",
@@ -378,7 +446,7 @@
     },
     {
       "id": "bartolli-codanna-plugins",
-      "name": "Codanna Plugins",
+      "name": "bartolli/codanna-plugins",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Bartolli",
@@ -394,25 +462,59 @@
       "addedAt": "2025-10-13"
     },
     {
-      "id": "bengous-claude-code-plugins",
-      "name": "Claude Code Plugins",
-      "description": "Claude Code plugins and tools",
+      "id": "baton8-takushinotifier",
+      "name": "Baton8/TakushiNotifier",
+      "description": "TTS通知機能を提供するローカルマーケットプレイス",
       "owner": {
-        "name": "Bengous",
-        "url": "https://github.com/bengous"
+        "name": "Baton8",
+        "url": "https://github.com/Baton8"
       },
-      "repository": "https://github.com/bengous/claude-code-plugins",
-      "manifestUrl": "https://raw.githubusercontent.com/bengous/claude-code-plugins/master/.claude-plugin/marketplace.json",
+      "repository": "https://github.com/Baton8/TakushiNotifier",
+      "manifestUrl": "https://raw.githubusercontent.com/Baton8/TakushiNotifier/main/.claude-plugin/marketplace.json",
       "tags": [
         "community"
       ],
-      "homepage": "https://github.com/bengous/claude-code-plugins",
+      "homepage": "https://github.com/Baton8/TakushiNotifier",
       "verified": false,
-      "addedAt": "2025-10-13"
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "bgauryy-octocode-mcp",
+      "name": "bgauryy/octocode-mcp",
+      "description": "Professional AI development team plugins for Claude Code",
+      "owner": {
+        "name": "Bgauryy",
+        "url": "https://github.com/bgauryy"
+      },
+      "repository": "https://github.com/bgauryy/octocode-mcp",
+      "manifestUrl": "https://raw.githubusercontent.com/bgauryy/octocode-mcp/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development"
+      ],
+      "homepage": "https://github.com/bgauryy/octocode-mcp",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "blackfishspirit-claude-project-continuity-plugin",
+      "name": "BlackfishSpirit/claude-project-continuity-plugin",
+      "description": "Project Continuity Plugin Marketplace",
+      "owner": {
+        "name": "BlackfishSpirit",
+        "url": "https://github.com/BlackfishSpirit"
+      },
+      "repository": "https://github.com/BlackfishSpirit/claude-project-continuity-plugin",
+      "manifestUrl": "https://raw.githubusercontent.com/BlackfishSpirit/claude-project-continuity-plugin/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/BlackfishSpirit/claude-project-continuity-plugin",
+      "verified": false,
+      "addedAt": "2025-10-17"
     },
     {
       "id": "blogic-cz-blogic-marketplace",
-      "name": "Blogic Marketplace",
+      "name": "blogic-cz/blogic-marketplace",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Blogic Cz",
@@ -429,7 +531,7 @@
     },
     {
       "id": "brandcast-signage-brandcast-plugins",
-      "name": "BrandCast development tools and automation workflows",
+      "name": "BrandCast-Signage/brandcast-plugins",
       "description": "BrandCast development tools and automation workflows for Claude Code",
       "owner": {
         "name": "BrandCast Signage",
@@ -446,7 +548,7 @@
     },
     {
       "id": "cashwu-claude-code-plugin",
-      "name": "Claude Code Plugin",
+      "name": "cashwu/Claude-Code-Plugin",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Cashwu",
@@ -462,8 +564,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "cblecker-claude-plugins",
+      "name": "cblecker/claude-plugins",
+      "description": "Personal collection of Claude Code plugins, subagents, slash commands, hooks, and MCP servers",
+      "owner": {
+        "name": "Cblecker",
+        "url": "https://github.com/cblecker"
+      },
+      "repository": "https://github.com/cblecker/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/cblecker/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/cblecker/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "ccplugins-awesome-claude-code-plugins",
-      "name": "Awesome Claude Code plugins",
+      "name": "ccplugins/awesome-claude-code-plugins",
       "description": "Awesome Claude Code plugins — a curated list of slash commands, subagents, MCP servers, and hooks for Claude Code",
       "owner": {
         "name": "Ccplugins",
@@ -486,42 +605,8 @@
       "addedAt": "2025-10-13"
     },
     {
-      "id": "chrissc-bash-logger-hook",
-      "name": "Self",
-      "description": "Self-hosted marketplace for bash-logger-hook plugin",
-      "owner": {
-        "name": "ChrisSc",
-        "url": "https://github.com/ChrisSc"
-      },
-      "repository": "https://github.com/ChrisSc/bash-logger-hook",
-      "manifestUrl": "https://raw.githubusercontent.com/ChrisSc/bash-logger-hook/main/.claude-plugin/marketplace.json",
-      "tags": [
-        "productivity"
-      ],
-      "homepage": "https://github.com/ChrisSc/bash-logger-hook",
-      "verified": false,
-      "addedAt": "2025-10-13"
-    },
-    {
-      "id": "chrissc-claude-contrib",
-      "name": "This community marketplace provides hooks and plugins",
-      "description": "This community marketplace provides hooks and plugins for session tracking, tool monitoring, performance analysis, and workflow debugging. Gain transparency into AI operations, identify bottlenecks",
-      "owner": {
-        "name": "ChrisSc",
-        "url": "https://github.com/ChrisSc"
-      },
-      "repository": "https://github.com/ChrisSc/claude-contrib",
-      "manifestUrl": "https://raw.githubusercontent.com/ChrisSc/claude-contrib/main/.claude-plugin/marketplace.json",
-      "tags": [
-        "community"
-      ],
-      "homepage": "https://github.com/ChrisSc/claude-contrib",
-      "verified": false,
-      "addedAt": "2025-10-13"
-    },
-    {
       "id": "christowles-towles-tool",
-      "name": "Towles Tool",
+      "name": "ChrisTowles/towles-tool",
       "description": "Collection of small tools i'm moving into this singular repo",
       "owner": {
         "name": "ChrisTowles",
@@ -537,8 +622,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "chromedevtools-chrome-devtools-mcp",
+      "name": "ChromeDevTools/chrome-devtools-mcp",
+      "description": "Bundled plugins for actuating and debugging the Chrome browser.",
+      "owner": {
+        "name": "ChromeDevTools",
+        "url": "https://github.com/ChromeDevTools"
+      },
+      "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "manifestUrl": "https://raw.githubusercontent.com/ChromeDevTools/chrome-devtools-mcp/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "verified": true,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "classmethod-tsumiki",
-      "name": "Tsumiki",
+      "name": "classmethod/tsumiki",
       "description": "Claude Code plugins and tools from Classmethod",
       "owner": {
         "name": "classmethod",
@@ -559,7 +661,7 @@
     },
     {
       "id": "claude-code-settings",
-      "name": "Claude Code Settings",
+      "name": "feiskyer/claude-code-settings",
       "description": "Settings and configuration tools for Claude Code",
       "owner": {
         "name": "feiskyer",
@@ -580,7 +682,7 @@
     },
     {
       "id": "claude-code-templates",
-      "name": "Claude Code Templates",
+      "name": "davila7/claude-code-templates",
       "description": "A collection of code templates and snippets for Claude Code",
       "owner": {
         "name": "davila7",
@@ -604,7 +706,7 @@
     },
     {
       "id": "claude-equity-research",
-      "name": "Claude Equity Research",
+      "name": "quant-sentiment-ai/claude-equity-research",
       "description": "Equity research and financial analysis tools for Claude Code",
       "owner": {
         "name": "quant-sentiment-ai",
@@ -628,7 +730,7 @@
     },
     {
       "id": "claude-genkit-plugin",
-      "name": "Claude Genkit Plugin",
+      "name": "amitpatole/claude-genkit-plugin",
       "description": "Genkit integration plugin for Claude Code",
       "owner": {
         "name": "amitpatole",
@@ -649,7 +751,7 @@
     },
     {
       "id": "cli-lsp-client",
-      "name": "CLI LSP Client",
+      "name": "eli0shin/cli-lsp-client",
       "description": "Language Server Protocol client for Claude Code CLI",
       "owner": {
         "name": "eli0shin",
@@ -669,8 +771,60 @@
       "addedAt": "2025-10-12"
     },
     {
+      "id": "codeglide-codeglide-agents",
+      "name": "CodeGlide/codeglide-agents",
+      "description": "CodeGlide marketplace for Claude Code plugins - Production-ready MCP server generators and development tools",
+      "owner": {
+        "name": "CodeGlide",
+        "url": "https://github.com/CodeGlide"
+      },
+      "repository": "https://github.com/CodeGlide/codeglide-agents",
+      "manifestUrl": "https://raw.githubusercontent.com/CodeGlide/codeglide-agents/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/CodeGlide/codeglide-agents",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "coinpaprika-claude-marketplace",
+      "name": "coinpaprika/claude-marketplace",
+      "description": "Official Claude plugins from CoinPaprika and DexPaprika: crypto market data, DEX analytics, liquidity pools, tokens, OHLCV, and more.",
+      "owner": {
+        "name": "Coinpaprika",
+        "url": "https://github.com/coinpaprika"
+      },
+      "repository": "https://github.com/coinpaprika/claude-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/coinpaprika/claude-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "defi",
+        "cryptocurrency"
+      ],
+      "homepage": "https://github.com/coinpaprika/claude-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "contextgraph-claude-code-plugin",
+      "name": "contextgraph/claude-code-plugin",
+      "description": "A living planning layer that gets smarter with every execution, for Claude Code",
+      "owner": {
+        "name": "Contextgraph",
+        "url": "https://github.com/contextgraph"
+      },
+      "repository": "https://github.com/contextgraph/claude-code-plugin",
+      "manifestUrl": "https://raw.githubusercontent.com/contextgraph/claude-code-plugin/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "planning"
+      ],
+      "homepage": "https://github.com/contextgraph/claude-code-plugin",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "crathgeb-claude-code-plugins",
-      "name": "Ready",
+      "name": "crathgeb/claude-code-plugins",
       "description": "Ready-to-use plugins for Claude Code",
       "owner": {
         "name": "Crathgeb",
@@ -687,7 +841,7 @@
     },
     {
       "id": "croffasia-cc-blueprint-toolkit",
-      "name": "Cc Blueprint Toolkit",
+      "name": "croffasia/cc-blueprint-toolkit",
       "description": "🏗️  Claude Code Plugin for smart blueprint-driven development",
       "owner": {
         "name": "Croffasia",
@@ -704,7 +858,7 @@
     },
     {
       "id": "danielscholl-claude-sdlc",
-      "name": "Official Every plugin marketplace",
+      "name": "danielscholl/claude-sdlc",
       "description": "Official Every plugin marketplace for Claude Code extensions",
       "owner": {
         "name": "Danielscholl",
@@ -720,8 +874,45 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "dev-gom-claude-code-marketplace",
+      "name": "Dev-GOM/claude-code-marketplace",
+      "description": "Productivity plugins for Claude Code to automate development workflows",
+      "owner": {
+        "name": "Dev GOM",
+        "url": "https://github.com/Dev-GOM"
+      },
+      "repository": "https://github.com/Dev-GOM/claude-code-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/Dev-GOM/claude-code-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "hooks",
+        "productivity"
+      ],
+      "homepage": "https://github.com/Dev-GOM/claude-code-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "dhofheinz-open-plugins",
+      "name": "dhofheinz/open-plugins",
+      "description": "AI-curated marketplace of high-quality, open-source Claude Code plugins. Features productivity tools, development utilities, and specialized agents for extending Claude Code capabilities.",
+      "owner": {
+        "name": "Dhofheinz",
+        "url": "https://github.com/dhofheinz"
+      },
+      "repository": "https://github.com/dhofheinz/open-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/dhofheinz/open-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development",
+        "quality",
+        "productivity"
+      ],
+      "homepage": "https://github.com/dhofheinz/open-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "dio0550-cc-plugin",
-      "name": "Cc Plugin",
+      "name": "DIO0550/cc-plugin",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "DIO0550",
@@ -738,7 +929,7 @@
     },
     {
       "id": "docker-claude-plugins",
-      "name": "Docker Claude Plugins",
+      "name": "docker/claude-plugins",
       "description": "Official Docker plugins and integrations for Claude Code",
       "owner": {
         "name": "Docker",
@@ -760,8 +951,42 @@
       "addedAt": "2025-10-11"
     },
     {
+      "id": "doozmen-claude-agents-cli",
+      "name": "doozMen/claude-agents-cli",
+      "description": "Production-ready AI agents for Claude Code with smart routing and zero configuration",
+      "owner": {
+        "name": "DoozMen",
+        "url": "https://github.com/doozMen"
+      },
+      "repository": "https://github.com/doozMen/claude-agents-cli",
+      "manifestUrl": "https://raw.githubusercontent.com/doozMen/claude-agents-cli/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development-tools"
+      ],
+      "homepage": "https://github.com/doozMen/claude-agents-cli",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "doozmen-swift-agents-plugin",
+      "name": "doozMen/swift-agents-plugin",
+      "description": "Production-ready AI agents for Claude Code with smart routing and zero configuration",
+      "owner": {
+        "name": "DoozMen",
+        "url": "https://github.com/doozMen"
+      },
+      "repository": "https://github.com/doozMen/swift-agents-plugin",
+      "manifestUrl": "https://raw.githubusercontent.com/doozMen/swift-agents-plugin/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development-tools"
+      ],
+      "homepage": "https://github.com/doozMen/swift-agents-plugin",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "dotclaude-marketplace",
-      "name": "DotClaude Marketplace",
+      "name": "dotclaude/marketplace",
       "description": "Claude Code marketplace from DotClaude",
       "owner": {
         "name": "dotclaude",
@@ -781,7 +1006,7 @@
     },
     {
       "id": "dustywalker-claude-code-marketplace",
-      "name": "Claude Code plugin marketplace featuring production",
+      "name": "DustyWalker/claude-code-marketplace",
       "description": "Claude Code plugin marketplace featuring production-ready agents based on comprehensive market research",
       "owner": {
         "name": "DustyWalker",
@@ -797,8 +1022,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "dvlin-dev-claude-code-marketplace",
+      "name": "dvlin-dev/claude-code-marketplace",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Dvlin Dev",
+        "url": "https://github.com/dvlin-dev"
+      },
+      "repository": "https://github.com/dvlin-dev/claude-code-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/dvlin-dev/claude-code-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/dvlin-dev/claude-code-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "eabay-claude-code-plugins",
-      "name": "Claude Code Plugins",
+      "name": "eabay/claude-code-plugins",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Eabay",
@@ -815,7 +1057,7 @@
     },
     {
       "id": "edmundmiller-dotfiles",
-      "name": "Version control workflow plugins",
+      "name": "edmundmiller/dotfiles",
       "description": "Version control workflow plugins for Jujutsu and Git",
       "owner": {
         "name": "Edmundmiller",
@@ -832,7 +1074,7 @@
     },
     {
       "id": "elct9620-claudekit",
-      "name": "A collection of plugins",
+      "name": "elct9620/claudekit",
       "description": "A collection of plugins for Claude Code used by Aotokitsuruya.",
       "owner": {
         "name": "Elct9620",
@@ -849,7 +1091,7 @@
     },
     {
       "id": "every-marketplace",
-      "name": "Every Marketplace",
+      "name": "EveryInc/every-marketplace",
       "description": "Claude Code plugins and tools from Every Inc",
       "owner": {
         "name": "Every Inc",
@@ -872,7 +1114,7 @@
     },
     {
       "id": "exa-mcp-server",
-      "name": "Exa MCP Server",
+      "name": "exa-labs/exa-mcp-server",
       "description": "Exa Labs MCP server plugins and tools for Claude Code",
       "owner": {
         "name": "exa-labs",
@@ -894,8 +1136,25 @@
       "addedAt": "2025-10-11"
     },
     {
+      "id": "eyaltoledano-claude-task-master",
+      "name": "eyaltoledano/claude-task-master",
+      "description": "Official marketplace for Taskmaster AI - AI-powered task management for ambitious development",
+      "owner": {
+        "name": "Eyaltoledano",
+        "url": "https://github.com/eyaltoledano"
+      },
+      "repository": "https://github.com/eyaltoledano/claude-task-master",
+      "manifestUrl": "https://raw.githubusercontent.com/eyaltoledano/claude-task-master/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/eyaltoledano/claude-task-master",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "filiphsps-filiphs-claude-code-plugins",
-      "name": "Filiphs Claude Code Plugins",
+      "name": "filiphsps/filiphs-claude-code-plugins",
       "description": "Claude Code plugins made by Filiph Sandström",
       "owner": {
         "name": "Filiphsps",
@@ -912,7 +1171,7 @@
     },
     {
       "id": "fradser-dotclaude",
-      "name": "Dotclaude",
+      "name": "FradSer/dotclaude",
       "description": "FradSer's Claude Code plugin marketplace featuring specialized agents and workflow automation",
       "owner": {
         "name": "FradSer",
@@ -930,7 +1189,7 @@
     },
     {
       "id": "fradser-mcp-server-remix-icon",
-      "name": "Mcp Server Remix Icon",
+      "name": "FradSer/mcp-server-remix-icon",
       "description": "Official Remix Icon MCP server providing intelligent icon search and discovery with semantic matching",
       "owner": {
         "name": "FradSer",
@@ -947,7 +1206,7 @@
     },
     {
       "id": "fussy113-claude-code-marketplace",
-      "name": "Bundled plugins",
+      "name": "fussy113/claude-code-marketplace",
       "description": "Bundled plugins for Claude Code",
       "owner": {
         "name": "Fussy113",
@@ -963,8 +1222,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "getty104-claude-code-marketplace",
+      "name": "getty104/claude-code-marketplace",
+      "description": "getty104's marketplace",
+      "owner": {
+        "name": "Getty104",
+        "url": "https://github.com/getty104"
+      },
+      "repository": "https://github.com/getty104/claude-code-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/getty104/claude-code-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/getty104/claude-code-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "giladshoham-awesome-claude-plugins",
-      "name": "A curated marketplace of awesome plugins",
+      "name": "GiladShoham/awesome-claude-plugins",
       "description": "A curated marketplace of awesome plugins for Claude",
       "owner": {
         "name": "GiladShoham",
@@ -981,7 +1257,7 @@
     },
     {
       "id": "gsornsen-mycelium",
-      "name": "Distributed intelligence marketplace",
+      "name": "gsornsen/mycelium",
       "description": "Distributed intelligence marketplace - 130+ expert agents, coordination infrastructure, and community plugins for Claude Code",
       "owner": {
         "name": "Gsornsen",
@@ -997,8 +1273,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "hekmon8-awesome-claude-code-plugins",
+      "name": "hekmon8/awesome-claude-code-plugins",
+      "description": "A curated collection of awesome Claude Code plugins, marketplaces, tools, and resources",
+      "owner": {
+        "name": "Hekmon8",
+        "url": "https://github.com/hekmon8"
+      },
+      "repository": "https://github.com/hekmon8/awesome-claude-code-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/hekmon8/awesome-claude-code-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/hekmon8/awesome-claude-code-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "henkisdabro-claudecode-marketplace",
-      "name": "Henkisdabro Claude Code Marketplace",
+      "name": "henkisdabro/claudecode-marketplace",
       "description": "Claude Code marketplace by Henkisdabro",
       "owner": {
         "name": "henkisdabro",
@@ -1016,8 +1309,25 @@
       "addedAt": "2025-10-12"
     },
     {
+      "id": "hmcts-claude",
+      "name": "hmcts/.claude",
+      "description": "HMCTS Claude Plugins",
+      "owner": {
+        "name": "Hmcts",
+        "url": "https://github.com/hmcts"
+      },
+      "repository": "https://github.com/hmcts/.claude",
+      "manifestUrl": "https://raw.githubusercontent.com/hmcts/.claude/master/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/hmcts/.claude",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "hmps-claude-marketplace",
-      "name": "Official hmps plugin marketplace",
+      "name": "hmps/claude-marketplace",
       "description": "Official hmps plugin marketplace for Claude Code extensions",
       "owner": {
         "name": "Hmps",
@@ -1034,7 +1344,7 @@
     },
     {
       "id": "hnegishi-cc-prtools",
-      "name": "Plugin for Claude Code that provides a collection of useful slash commands",
+      "name": "hnegishi/cc-prtools",
       "description": "Plugin for Claude Code that provides a collection of useful slash commands for managing pull requests",
       "owner": {
         "name": "Hnegishi",
@@ -1051,7 +1361,7 @@
     },
     {
       "id": "huangdijia-cluade-code-plugins",
-      "name": "Cluade Code Plugins",
+      "name": "huangdijia/cluade-code-plugins",
       "description": "Claude Plugin Marketplace",
       "owner": {
         "name": "Huangdijia",
@@ -1067,8 +1377,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "huangmingxia-test-generation-assistant",
+      "name": "huangmingxia/test-generation-assistant",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Huangmingxia",
+        "url": "https://github.com/huangmingxia"
+      },
+      "repository": "https://github.com/huangmingxia/test-generation-assistant",
+      "manifestUrl": "https://raw.githubusercontent.com/huangmingxia/test-generation-assistant/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/huangmingxia/test-generation-assistant",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "hugoduncan-claude-marketplace",
-      "name": "Claude Marketplace",
+      "name": "hugoduncan/claude-marketplace",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Hugoduncan",
@@ -1084,25 +1411,8 @@
       "addedAt": "2025-10-13"
     },
     {
-      "id": "ibytechaos-claude",
-      "name": "Claude",
-      "description": "ibytechaos claude code plugins",
-      "owner": {
-        "name": "Ibytechaos",
-        "url": "https://github.com/ibytechaos"
-      },
-      "repository": "https://github.com/ibytechaos/claude",
-      "manifestUrl": "https://raw.githubusercontent.com/ibytechaos/claude/main/.claude-plugin/marketplace.json",
-      "tags": [
-        "development"
-      ],
-      "homepage": "https://github.com/ibytechaos/claude",
-      "verified": false,
-      "addedAt": "2025-10-13"
-    },
-    {
       "id": "ilyannn-claude-commands",
-      "name": "Plugin bundle",
+      "name": "ilyannn/claude-commands",
       "description": "Plugin bundle for Claude Code Flow developer workflow automation",
       "owner": {
         "name": "Ilyannn",
@@ -1119,7 +1429,7 @@
     },
     {
       "id": "imaginepro-mcp-server",
-      "name": "ImaginePro MCP Server",
+      "name": "imaginpro/imaginepro-mcp-server",
       "description": "MCP server plugins and integrations for Claude Code",
       "owner": {
         "name": "imaginpro",
@@ -1139,8 +1449,42 @@
       "addedAt": "2025-10-11"
     },
     {
+      "id": "imalsogreg-vibelearning",
+      "name": "imalsogreg/vibelearning",
+      "description": "Claude slash command for creating a tutor",
+      "owner": {
+        "name": "Imalsogreg",
+        "url": "https://github.com/imalsogreg"
+      },
+      "repository": "https://github.com/imalsogreg/vibelearning",
+      "manifestUrl": "https://raw.githubusercontent.com/imalsogreg/vibelearning/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/imalsogreg/vibelearning",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "jamsajones-claude-squad",
+      "name": "jamsajones/claude-squad",
+      "description": "Local marketplace for Claude Squad Plugin development and testing",
+      "owner": {
+        "name": "Jamsajones",
+        "url": "https://github.com/jamsajones"
+      },
+      "repository": "https://github.com/jamsajones/claude-squad",
+      "manifestUrl": "https://raw.githubusercontent.com/jamsajones/claude-squad/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/jamsajones/claude-squad",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "jeffh-claude-plugins",
-      "name": "Jeffh Claude Plugins",
+      "name": "jeffh/claude-plugins",
       "description": "Claude Code plugins and extensions by jeffh",
       "owner": {
         "name": "jeffh",
@@ -1160,7 +1504,7 @@
     },
     {
       "id": "jeongjaesoon-claude-code-marketplace",
-      "name": "Claude Code Marketplace",
+      "name": "JeongJaeSoon/claude-code-marketplace",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "JeongJaeSoon",
@@ -1176,25 +1520,8 @@
       "addedAt": "2025-10-13"
     },
     {
-      "id": "jeremylongshore-plugins-claude-code",
-      "name": "Plugins Claude Code",
-      "description": "Custom Claude Code plugins and tools marketplace",
-      "owner": {
-        "name": "Jeremylongshore",
-        "url": "https://github.com/jeremylongshore"
-      },
-      "repository": "https://github.com/jeremylongshore/plugins-Claude-code",
-      "manifestUrl": "https://raw.githubusercontent.com/jeremylongshore/plugins-Claude-code/main/.claude-plugin/marketplace.json",
-      "tags": [
-        "community"
-      ],
-      "homepage": "https://github.com/jeremylongshore/plugins-Claude-code",
-      "verified": false,
-      "addedAt": "2025-10-13"
-    },
-    {
       "id": "jmanhype-claude-code-plugin-marketplace",
-      "name": "Production",
+      "name": "jmanhype/claude-code-plugin-marketplace",
       "description": "Production-grade multi-agent systems for trading, automation, and swarm intelligence",
       "owner": {
         "name": "Jmanhype",
@@ -1211,7 +1538,7 @@
     },
     {
       "id": "jmanhype-claude-code-plugins",
-      "name": "JManHype Claude Code Plugins",
+      "name": "jmanhype/claude-code-plugins",
       "description": "Claude Code plugins and extensions by JManHype",
       "owner": {
         "name": "jmanhype",
@@ -1231,7 +1558,7 @@
     },
     {
       "id": "jmgilman-sow",
-      "name": "An AI",
+      "name": "jmgilman/sow",
       "description": "An AI-powered system of work for creating software",
       "owner": {
         "name": "Jmgilman",
@@ -1248,7 +1575,7 @@
     },
     {
       "id": "johnclyde-clydehub",
-      "name": "Opinionated Git workflow plugin for Claude Code",
+      "name": "johnclyde/clydehub",
       "description": "Opinionated Git workflow plugin for Claude Code - clean commits, smart staging, zero attribution",
       "owner": {
         "name": "Johnclyde",
@@ -1265,7 +1592,7 @@
     },
     {
       "id": "johnmatthewtennant-mcp-voice-hooks",
-      "name": "Mcp Voice Hooks",
+      "name": "johnmatthewtennant/mcp-voice-hooks",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Johnmatthewtennant",
@@ -1281,25 +1608,76 @@
       "addedAt": "2025-10-13"
     },
     {
-      "id": "jwilger-claude-code-setup",
-      "name": "Professional SDLC workflow plugins",
-      "description": "Professional SDLC workflow plugins for Event Modeling, TDD, and Type-First Design. Includes application and infrastructure workflows with specialized agents for requirements analysis",
+      "id": "kanopi-claude-toolbox",
+      "name": "kanopi/claude-toolbox",
+      "description": "Official Claude Code toolbox from Kanopi Studios for Content Management System (CMS) development",
       "owner": {
-        "name": "Jwilger",
-        "url": "https://github.com/jwilger"
+        "name": "Kanopi",
+        "url": "https://github.com/kanopi"
       },
-      "repository": "https://github.com/jwilger/claude-code-setup",
-      "manifestUrl": "https://raw.githubusercontent.com/jwilger/claude-code-setup/main/.claude-plugin/marketplace.json",
+      "repository": "https://github.com/kanopi/claude-toolbox",
+      "manifestUrl": "https://raw.githubusercontent.com/kanopi/claude-toolbox/main/.claude-plugin/marketplace.json",
       "tags": [
         "community"
       ],
-      "homepage": "https://github.com/jwilger/claude-code-setup",
+      "homepage": "https://github.com/kanopi/claude-toolbox",
       "verified": false,
-      "addedAt": "2025-10-13"
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "karaage0703-claude-coding-assistant",
+      "name": "karaage0703/claude-coding-assistant",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Karaage0703",
+        "url": "https://github.com/karaage0703"
+      },
+      "repository": "https://github.com/karaage0703/claude-coding-assistant",
+      "manifestUrl": "https://raw.githubusercontent.com/karaage0703/claude-coding-assistant/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/karaage0703/claude-coding-assistant",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "kentanakae-claude-code-plugins-demo",
+      "name": "kentanakae/claude-code-plugins-demo",
+      "description": "Demo Plugins Marketplace",
+      "owner": {
+        "name": "Kentanakae",
+        "url": "https://github.com/kentanakae"
+      },
+      "repository": "https://github.com/kentanakae/claude-code-plugins-demo",
+      "manifestUrl": "https://raw.githubusercontent.com/kentanakae/claude-code-plugins-demo/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/kentanakae/claude-code-plugins-demo",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "killerapp-mem8-plugin",
+      "name": "killerapp/mem8-plugin",
+      "description": "Official mem8 plugin marketplace for Claude Code",
+      "owner": {
+        "name": "Killerapp",
+        "url": "https://github.com/killerapp"
+      },
+      "repository": "https://github.com/killerapp/mem8-plugin",
+      "manifestUrl": "https://raw.githubusercontent.com/killerapp/mem8-plugin/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/killerapp/mem8-plugin",
+      "verified": false,
+      "addedAt": "2025-10-17"
     },
     {
       "id": "kivilaid-plugin-marketplace",
-      "name": "Plugin Marketplace",
+      "name": "kivilaid/plugin-marketplace",
       "description": "Claude Code plugin marketplace featuring productivity tools with Git automation, code review, and testing capabilities",
       "owner": {
         "name": "Kivilaid",
@@ -1316,7 +1694,7 @@
     },
     {
       "id": "kodflow-repository",
-      "name": ".repository",
+      "name": "kodflow/.repository",
       "description": "Collection of development plugins with strict standards and best practices enforcement",
       "owner": {
         "name": "Kodflow",
@@ -1333,7 +1711,7 @@
     },
     {
       "id": "kylesnowschwartz-simpleclaude",
-      "name": "SimpleClaude",
+      "name": "kylesnowschwartz/SimpleClaude",
       "description": "Practical minimalist AI assistant framework with specialized agents",
       "owner": {
         "name": "Kylesnowschwartz",
@@ -1350,7 +1728,7 @@
     },
     {
       "id": "laststance-claude-code-marketplace",
-      "name": "Laststance marketplace",
+      "name": "laststance/claude-code-marketplace",
       "description": "Laststance marketplace for Claude Code plugins including the Mac Notification Hook.",
       "owner": {
         "name": "Laststance",
@@ -1367,7 +1745,7 @@
     },
     {
       "id": "laura-agent-claude-to-speech",
-      "name": "A Claude Code plugin to utilize Elevenlabs TTS",
+      "name": "LAURA-agent/Claude-to-Speech",
       "description": "A Claude Code plugin to utilize Elevenlabs TTS for responses when needed",
       "owner": {
         "name": "LAURA Agent",
@@ -1384,7 +1762,7 @@
     },
     {
       "id": "lbildzinkas-claude-code-market-place",
-      "name": "Claude Code Market Place",
+      "name": "lbildzinkas/claude-code-market-place",
       "description": "A curated collection of professional development plugins focused on fullstack development with FastAPI, React, and modern web technologies",
       "owner": {
         "name": "Lbildzinkas",
@@ -1400,8 +1778,42 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "leobrival-blog-kit",
+      "name": "leobrival/blog-kit",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Leobrival",
+        "url": "https://github.com/leobrival"
+      },
+      "repository": "https://github.com/leobrival/blog-kit",
+      "manifestUrl": "https://raw.githubusercontent.com/leobrival/blog-kit/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/leobrival/blog-kit",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "lightsoft-dev-claude-plugin-for-dev",
+      "name": "lightsoft-dev/claude-plugin-for-dev",
+      "description": "claude plugin for teammates",
+      "owner": {
+        "name": "Lightsoft Dev",
+        "url": "https://github.com/lightsoft-dev"
+      },
+      "repository": "https://github.com/lightsoft-dev/claude-plugin-for-dev",
+      "manifestUrl": "https://raw.githubusercontent.com/lightsoft-dev/claude-plugin-for-dev/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/lightsoft-dev/claude-plugin-for-dev",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "lpasqualis-lpclaude",
-      "name": "Production",
+      "name": "lpasqualis/lpclaude",
       "description": "Production-ready Claude Code plugin featuring 30+ slash commands for Git automation, documentation generation, job queues, and code quality. Includes 6 specialized agents for security review",
       "owner": {
         "name": "Lpasqualis",
@@ -1418,7 +1830,7 @@
     },
     {
       "id": "martingonzalez-claude-plugins",
-      "name": "Bundled plugins",
+      "name": "MartinGonzalez/claude-plugins",
       "description": "Bundled plugins for Claude Code including Agent SDK development tools, PR review toolkit, and commit workflows",
       "owner": {
         "name": "MartinGonzalez",
@@ -1435,7 +1847,7 @@
     },
     {
       "id": "martybonacci-specswarm",
-      "name": "Specification",
+      "name": "MartyBonacci/specswarm",
       "description": "Specification-driven development orchestration plugins for Claude Code",
       "owner": {
         "name": "MartyBonacci",
@@ -1452,7 +1864,7 @@
     },
     {
       "id": "melvynx-aiblueprint",
-      "name": "Aiblueprint",
+      "name": "Melvynx/aiblueprint",
       "description": "AIBlueprint Claude Code configuration marketplace with custom agents, commands, and workflows",
       "owner": {
         "name": "Melvynx",
@@ -1468,8 +1880,42 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "mh4gf-issync",
+      "name": "MH4GF/issync",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "MH4GF",
+        "url": "https://github.com/MH4GF"
+      },
+      "repository": "https://github.com/MH4GF/issync",
+      "manifestUrl": "https://raw.githubusercontent.com/MH4GF/issync/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/MH4GF/issync",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "mileschou-claude-marketplace",
+      "name": "MilesChou/claude-marketplace",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "MilesChou",
+        "url": "https://github.com/MilesChou"
+      },
+      "repository": "https://github.com/MilesChou/claude-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/MilesChou/claude-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development"
+      ],
+      "homepage": "https://github.com/MilesChou/claude-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "mlaugharn-plugin-marketplace",
-      "name": "Plugin Marketplace",
+      "name": "mlaugharn/plugin-marketplace",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Mlaugharn",
@@ -1485,8 +1931,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "mmaaz-git-agentic-pbt",
+      "name": "mmaaz-git/agentic-pbt",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Mmaaz Git",
+        "url": "https://github.com/mmaaz-git"
+      },
+      "repository": "https://github.com/mmaaz-git/agentic-pbt",
+      "manifestUrl": "https://raw.githubusercontent.com/mmaaz-git/agentic-pbt/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/mmaaz-git/agentic-pbt",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "mpazaryna-claude-toolkit",
-      "name": "Claude Toolkit",
+      "name": "mpazaryna/claude-toolkit",
       "description": "A collection of specialized agents, commands, and templates for enhancing Claude Code's capabilities",
       "owner": {
         "name": "Mpazaryna",
@@ -1503,7 +1966,7 @@
     },
     {
       "id": "myclaude",
-      "name": "MyClaude",
+      "name": "cexll/myclaude",
       "description": "Claude Code plugins and tools by cexll",
       "owner": {
         "name": "cexll",
@@ -1522,7 +1985,7 @@
     },
     {
       "id": "n4s5ti-claude-flow",
-      "name": "Enterprise AI agent orchestration marketplace",
+      "name": "n4s5ti/claude-flow",
       "description": "Enterprise AI agent orchestration marketplace for Claude Code",
       "owner": {
         "name": "N4s5ti",
@@ -1538,8 +2001,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "natifridman-claude-plugins",
+      "name": "natifridman/claude-plugins",
+      "description": "Team standards and shared workflows for code review and project setup",
+      "owner": {
+        "name": "Natifridman",
+        "url": "https://github.com/natifridman"
+      },
+      "repository": "https://github.com/natifridman/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/natifridman/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/natifridman/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "nazymko-claude-code-marketplace",
-      "name": "Claude Code Marketplace",
+      "name": "nazymko/claude-code-marketplace",
       "description": "A curated collection of Claude Code plugins including agents, commands, and integrations for enhanced development workflows",
       "owner": {
         "name": "Nazymko",
@@ -1555,8 +2035,42 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "nguyentuansi-claude-plugins",
+      "name": "nguyentuansi/claude-plugins",
+      "description": "Essential development plugins for Claude Code",
+      "owner": {
+        "name": "Nguyentuansi",
+        "url": "https://github.com/nguyentuansi"
+      },
+      "repository": "https://github.com/nguyentuansi/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/nguyentuansi/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/nguyentuansi/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "nibzard-steel-marketplace",
+      "name": "nibzard/steel-marketplace",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Nibzard",
+        "url": "https://github.com/nibzard"
+      },
+      "repository": "https://github.com/nibzard/steel-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/nibzard/steel-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/nibzard/steel-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "ninthspace-claude-code-marketplace",
-      "name": "A comprehensive marketplace",
+      "name": "ninthspace/claude-code-marketplace",
       "description": "A comprehensive marketplace for my development tools",
       "owner": {
         "name": "Ninthspace",
@@ -1573,7 +2087,7 @@
     },
     {
       "id": "oneryalcin-nexus-plugin",
-      "name": "Skills nexus",
+      "name": "oneryalcin/nexus-plugin",
       "description": "Skills nexus for research, data analysis, and business workflows",
       "owner": {
         "name": "Oneryalcin",
@@ -1589,8 +2103,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "openshift-eng-ai-helpers",
+      "name": "openshift-eng/ai-helpers",
+      "description": "Developer productivity tools for Claude Code & other AI assistants",
+      "owner": {
+        "name": "Openshift Eng",
+        "url": "https://github.com/openshift-eng"
+      },
+      "repository": "https://github.com/openshift-eng/ai-helpers",
+      "manifestUrl": "https://raw.githubusercontent.com/openshift-eng/ai-helpers/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/openshift-eng/ai-helpers",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "otrebu-agents",
-      "name": "Agents",
+      "name": "otrebu/agents",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Otrebu",
@@ -1607,7 +2138,7 @@
     },
     {
       "id": "panguin6010-daisy-mode-plugin",
-      "name": "Autonomous feature implementation with CI loop integration",
+      "name": "panguin6010/daisy-mode-plugin",
       "description": "Autonomous feature implementation with CI loop integration - implement features from branch creation through PR submission with automated test monitoring",
       "owner": {
         "name": "Panguin6010",
@@ -1624,7 +2155,7 @@
     },
     {
       "id": "panw3i-claude-plugins",
-      "name": "Claude Plugins",
+      "name": "panw3i/claude-plugins",
       "description": "panw3i 的 Claude Code 插件市场",
       "owner": {
         "name": "Panw3i",
@@ -1641,7 +2172,7 @@
     },
     {
       "id": "parslee-ai-claude-code-plugins",
-      "name": "Claude Code Plugins",
+      "name": "Parslee-ai/claude-code-plugins",
       "description": "A marketplace of useful claude code plugins",
       "owner": {
         "name": "Parslee Ai",
@@ -1657,25 +2188,26 @@
       "addedAt": "2025-10-13"
     },
     {
-      "id": "parslee-ai-neo",
-      "name": "A self",
-      "description": "A self-improving code reasoning engine with persistent semantic memory",
+      "id": "phaezer-claude-mkt",
+      "name": "phaezer/claude-mkt",
+      "description": "A curated marketplace for professional Claude Code plugins focused on infrastructure, automation, and platform engineering",
       "owner": {
-        "name": "Parslee Ai",
-        "url": "https://github.com/Parslee-ai"
+        "name": "Phaezer",
+        "url": "https://github.com/phaezer"
       },
-      "repository": "https://github.com/Parslee-ai/neo",
-      "manifestUrl": "https://raw.githubusercontent.com/Parslee-ai/neo/main/.claude-plugin/marketplace.json",
+      "repository": "https://github.com/phaezer/claude-mkt",
+      "manifestUrl": "https://raw.githubusercontent.com/phaezer/claude-mkt/main/.claude-plugin/marketplace.json",
       "tags": [
-        "community"
+        "infrastructure",
+        "development"
       ],
-      "homepage": "https://github.com/Parslee-ai/neo",
+      "homepage": "https://github.com/phaezer/claude-mkt",
       "verified": false,
-      "addedAt": "2025-10-13"
+      "addedAt": "2025-10-17"
     },
     {
       "id": "piotr1215-aiverse",
-      "name": "A universe of AI",
+      "name": "Piotr1215/aiverse",
       "description": "A universe of AI-augmented development utilities, inspired by Unix philosophy",
       "owner": {
         "name": "Piotr1215",
@@ -1692,7 +2224,7 @@
     },
     {
       "id": "playeola-plugins",
-      "name": "PlayEola Plugins",
+      "name": "Play-E-Ola/playeola-plugins",
       "description": "Claude Code plugins from Play-E-Ola",
       "owner": {
         "name": "Play-E-Ola",
@@ -1711,7 +2243,7 @@
     },
     {
       "id": "rbonestell-hyperclaude-nano",
-      "name": "Nano",
+      "name": "rbonestell/hyperclaude-nano",
       "description": "Nano-sized framework with 7 specialized agents, 14 slash commands, and strict tool enforcement for optimal Claude Code usage",
       "owner": {
         "name": "Rbonestell",
@@ -1727,8 +2259,59 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "redplanethq-redplanethq-marketplace",
+      "name": "RedPlanetHQ/redplanethq-marketplace",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "RedPlanetHQ",
+        "url": "https://github.com/RedPlanetHQ"
+      },
+      "repository": "https://github.com/RedPlanetHQ/redplanethq-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/RedPlanetHQ/redplanethq-marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/RedPlanetHQ/redplanethq-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "remix-design-remixicon-mcp",
+      "name": "Remix-Design/RemixIcon-MCP",
+      "description": "Official Remix Icon MCP server providing intelligent icon search and discovery with semantic matching",
+      "owner": {
+        "name": "Remix Design",
+        "url": "https://github.com/Remix-Design"
+      },
+      "repository": "https://github.com/Remix-Design/RemixIcon-MCP",
+      "manifestUrl": "https://raw.githubusercontent.com/Remix-Design/RemixIcon-MCP/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/Remix-Design/RemixIcon-MCP",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "rjroy-vibe-garden",
+      "name": "rjroy/vibe-garden",
+      "description": "A set of prompt seeds for agentic development.",
+      "owner": {
+        "name": "Rjroy",
+        "url": "https://github.com/rjroy"
+      },
+      "repository": "https://github.com/rjroy/vibe-garden",
+      "manifestUrl": "https://raw.githubusercontent.com/rjroy/vibe-garden/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/rjroy/vibe-garden",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "rohittcodes-claude-plugin-suite",
-      "name": "Claude Plugin Suite",
+      "name": "rohittcodes/claude-plugin-suite",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Rohittcodes",
@@ -1745,7 +2328,7 @@
     },
     {
       "id": "ruvnet-claude-flow",
-      "name": "Claude Flow",
+      "name": "ruvnet/claude-flow",
       "description": "Workflow automation and flow-based plugins for Claude Code",
       "owner": {
         "name": "ruvnet",
@@ -1766,7 +2349,7 @@
     },
     {
       "id": "samber-cc",
-      "name": "Cc",
+      "name": "samber/cc",
       "description": "🔬 Claude Code toolchain",
       "owner": {
         "name": "Samber",
@@ -1782,8 +2365,93 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "samuelgarrett-claude-code-plugin-test",
+      "name": "samuelgarrett/claude-code-plugin-test",
+      "description": "testing a claude code marketplace",
+      "owner": {
+        "name": "Samuelgarrett",
+        "url": "https://github.com/samuelgarrett"
+      },
+      "repository": "https://github.com/samuelgarrett/claude-code-plugin-test",
+      "manifestUrl": "https://raw.githubusercontent.com/samuelgarrett/claude-code-plugin-test/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/samuelgarrett/claude-code-plugin-test",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "schpet-jjagent",
+      "name": "schpet/jjagent",
+      "description": "marketplace for jjagent claude code plugin",
+      "owner": {
+        "name": "Schpet",
+        "url": "https://github.com/schpet"
+      },
+      "repository": "https://github.com/schpet/jjagent",
+      "manifestUrl": "https://raw.githubusercontent.com/schpet/jjagent/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/schpet/jjagent",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "schuyler-duck-soup",
+      "name": "schuyler/duck-soup",
+      "description": "what if your dev team was the Marx Brothers",
+      "owner": {
+        "name": "Schuyler",
+        "url": "https://github.com/schuyler"
+      },
+      "repository": "https://github.com/schuyler/duck-soup",
+      "manifestUrl": "https://raw.githubusercontent.com/schuyler/duck-soup/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/schuyler/duck-soup",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "seekayel-claude-plugins",
+      "name": "seekayel/claude-plugins",
+      "description": "install a looping syntax for claude code",
+      "owner": {
+        "name": "Seekayel",
+        "url": "https://github.com/seekayel"
+      },
+      "repository": "https://github.com/seekayel/claude-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/seekayel/claude-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/seekayel/claude-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "shakes-tzd-slashsense",
+      "name": "Shakes-tzd/slashsense",
+      "description": "Natural language to slash command mapping for Claude Code. The first intent detection plugin for coding agents.",
+      "owner": {
+        "name": "Shakes Tzd",
+        "url": "https://github.com/Shakes-tzd"
+      },
+      "repository": "https://github.com/Shakes-tzd/slashsense",
+      "manifestUrl": "https://raw.githubusercontent.com/Shakes-tzd/slashsense/master/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/Shakes-tzd/slashsense",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "shaurgon-claude-meow-marketplace",
-      "name": "Curated collection of productivity plugins for Claude Code",
+      "name": "shaurgon/claude-meow-marketplace",
       "description": "Curated collection of productivity plugins for Claude Code: context management, task tracking, and workflow automation",
       "owner": {
         "name": "Shaurgon",
@@ -1800,7 +2468,7 @@
     },
     {
       "id": "shin902-shi-marketplace",
-      "name": "Shi Marketplace",
+      "name": "shin902/shi-marketplace",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "Shin902",
@@ -1817,7 +2485,7 @@
     },
     {
       "id": "shinpr-claude-code-workflows",
-      "name": "Claude Code Workflows",
+      "name": "shinpr/claude-code-workflows",
       "description": "🤖 AI coding team in a plugin: Automated workflows from requirements to deployment. Never   hit context limits. Never compromise on quality.",
       "owner": {
         "name": "Shinpr",
@@ -1833,8 +2501,27 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "shunsukehayashi-miyabi",
+      "name": "ShunsukeHayashi/Miyabi",
+      "description": "完全自律型AI開発プラットフォーム Miyabi の公式プラグインコレクション",
+      "owner": {
+        "name": "ShunsukeHayashi",
+        "url": "https://github.com/ShunsukeHayashi"
+      },
+      "repository": "https://github.com/ShunsukeHayashi/Miyabi",
+      "manifestUrl": "https://raw.githubusercontent.com/ShunsukeHayashi/Miyabi/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "automation",
+        "productivity",
+        "agents"
+      ],
+      "homepage": "https://github.com/ShunsukeHayashi/Miyabi",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "siraken-claude-plugins",
-      "name": "A collection of Claude plugins",
+      "name": "siraken/claude-plugins",
       "description": "A collection of Claude plugins for various functionalities",
       "owner": {
         "name": "Siraken",
@@ -1851,7 +2538,7 @@
     },
     {
       "id": "sislammun-iowarp-plugin",
-      "name": "Official plugin marketplace",
+      "name": "SIslamMun/iowarp-plugin",
       "description": "Official plugin marketplace for IOWarp project tools and integrations",
       "owner": {
         "name": "SIslamMun",
@@ -1868,7 +2555,7 @@
     },
     {
       "id": "sjungling-claude-plugins",
-      "name": "Claude Plugins",
+      "name": "sjungling/claude-plugins",
       "description": "Personal collection of Claude Code plugins",
       "owner": {
         "name": "Sjungling",
@@ -1885,7 +2572,7 @@
     },
     {
       "id": "slash-criticalthink",
-      "name": "Slash CriticalThink",
+      "name": "abagames/slash-criticalthink",
       "description": "Critical thinking slash commands for Claude Code",
       "owner": {
         "name": "abagames",
@@ -1905,8 +2592,25 @@
       "addedAt": "2025-10-12"
     },
     {
+      "id": "slgoodrich-agents",
+      "name": "slgoodrich/agents",
+      "description": "Comprehensive product management plugin suite for full-stack PMs - strategy, discovery, planning, delivery, and growth",
+      "owner": {
+        "name": "Slgoodrich",
+        "url": "https://github.com/slgoodrich"
+      },
+      "repository": "https://github.com/slgoodrich/agents",
+      "manifestUrl": "https://raw.githubusercontent.com/slgoodrich/agents/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "product-management"
+      ],
+      "homepage": "https://github.com/slgoodrich/agents",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "stepankuzmin-claude-code-plugins",
-      "name": "Claude Code Plugins",
+      "name": "stepankuzmin/claude-code-plugins",
       "description": "A collection of Claude Code plugins",
       "owner": {
         "name": "Stepankuzmin",
@@ -1923,7 +2627,7 @@
     },
     {
       "id": "superpowers-marketplace",
-      "name": "Superpowers Marketplace",
+      "name": "obra/superpowers-marketplace",
       "description": "Curated collection of powerful plugins and superpowers for Claude Code",
       "owner": {
         "name": "obra",
@@ -1943,8 +2647,76 @@
       "addedAt": "2025-10-11"
     },
     {
+      "id": "szugyi-claude-plugin-poc",
+      "name": "szugyi/claude-plugin-poc",
+      "description": "Just a PoC to see if we can easily host our own plugin marketplace",
+      "owner": {
+        "name": "Szugyi",
+        "url": "https://github.com/szugyi"
+      },
+      "repository": "https://github.com/szugyi/claude-plugin-poc",
+      "manifestUrl": "https://raw.githubusercontent.com/szugyi/claude-plugin-poc/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "testing"
+      ],
+      "homepage": "https://github.com/szugyi/claude-plugin-poc",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "techintegrationlabs-disruptors-ai-marketing-hub",
+      "name": "TechIntegrationLabs/disruptors-ai-marketing-hub",
+      "description": "Official Disruptors AI plugin marketplace for Claude Code MCP servers and development tools",
+      "owner": {
+        "name": "TechIntegrationLabs",
+        "url": "https://github.com/TechIntegrationLabs"
+      },
+      "repository": "https://github.com/TechIntegrationLabs/disruptors-ai-marketing-hub",
+      "manifestUrl": "https://raw.githubusercontent.com/TechIntegrationLabs/disruptors-ai-marketing-hub/master/.claude-plugin/marketplace.json",
+      "tags": [
+        "development"
+      ],
+      "homepage": "https://github.com/TechIntegrationLabs/disruptors-ai-marketing-hub",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "technickai-ai-coding-config",
+      "name": "TechNickAI/ai-coding-config",
+      "description": "Professional AI coding configurations, agents, standards, and personalities for Claude Code and Cursor",
+      "owner": {
+        "name": "TechNickAI",
+        "url": "https://github.com/TechNickAI"
+      },
+      "repository": "https://github.com/TechNickAI/ai-coding-config",
+      "manifestUrl": "https://raw.githubusercontent.com/TechNickAI/ai-coding-config/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "personality"
+      ],
+      "homepage": "https://github.com/TechNickAI/ai-coding-config",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "telecomsxchangeapi-destinations-api-claude-plugin",
+      "name": "TelecomsXChangeAPi/destinations-api-claude-plugin",
+      "description": "Official marketplace for Destinations API - Global telecommunications database with MCC/MNC codes, E.164/E.212 mapping, and carrier billing data",
+      "owner": {
+        "name": "TelecomsXChangeAPi",
+        "url": "https://github.com/TelecomsXChangeAPi"
+      },
+      "repository": "https://github.com/TelecomsXChangeAPi/destinations-api-claude-plugin",
+      "manifestUrl": "https://raw.githubusercontent.com/TelecomsXChangeAPi/destinations-api-claude-plugin/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/TelecomsXChangeAPi/destinations-api-claude-plugin",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "thc1006-telecom-ops-claude-code-plugins",
-      "name": "Telecom Ops Claude Code Plugins",
+      "name": "thc1006/telecom-ops-claude-code-plugins",
       "description": "[Developing] Claude Code plugins & marketplace for telecom cloud automation. Wraps O-RAN O2-IMS/DMS, Nephio (Porch/kpt) and Kubernetes as MCP tools to realize Intent→KRM→GitOps with QoS assurance.",
       "owner": {
         "name": "Thc1006",
@@ -1961,7 +2733,7 @@
     },
     {
       "id": "tokenrollai-cc-plugin",
-      "name": "Cc Plugin",
+      "name": "TokenRollAI/cc-plugin",
       "description": "TokenRoll internal Claude Code plugin marketplace",
       "owner": {
         "name": "TokenRollAI",
@@ -1978,7 +2750,7 @@
     },
     {
       "id": "tomcn0803-claude-code-plugins",
-      "name": "Claude Code Plugins",
+      "name": "TomCN0803/claude-code-plugins",
       "description": "Claude Code plugins and tools",
       "owner": {
         "name": "TomCN0803",
@@ -1994,8 +2766,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "toskysun-sub-agents",
+      "name": "Toskysun/sub-agents",
+      "description": "Universal AI Agents Marketplace - comprehensive development agents with boundary enforcement",
+      "owner": {
+        "name": "Toskysun",
+        "url": "https://github.com/Toskysun"
+      },
+      "repository": "https://github.com/Toskysun/sub-agents",
+      "manifestUrl": "https://raw.githubusercontent.com/Toskysun/sub-agents/master/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/Toskysun/sub-agents",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "udecode-dotai",
-      "name": "Dot AI",
+      "name": "udecode/dotai",
       "description": "AI-powered development tools and plugins from Udecode",
       "owner": {
         "name": "udecode",
@@ -2015,8 +2804,42 @@
       "addedAt": "2025-10-11"
     },
     {
+      "id": "ursisterbtw-ccprompts",
+      "name": "ursisterbtw/ccprompts",
+      "description": "Official marketplace for the CC Prompts comprehensive command ecosystem",
+      "owner": {
+        "name": "Ursisterbtw",
+        "url": "https://github.com/ursisterbtw"
+      },
+      "repository": "https://github.com/ursisterbtw/ccprompts",
+      "manifestUrl": "https://raw.githubusercontent.com/ursisterbtw/ccprompts/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/ursisterbtw/ccprompts",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "vitalmasterr-claude-plugins-marketplace",
+      "name": "vitalmasterr/claude-plugins-marketplace",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Vitalmasterr",
+        "url": "https://github.com/vitalmasterr"
+      },
+      "repository": "https://github.com/vitalmasterr/claude-plugins-marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/vitalmasterr/claude-plugins-marketplace/master/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/vitalmasterr/claude-plugins-marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "vizzly-testing-cli",
-      "name": "Official Vizzly plugin for Claude Code",
+      "name": "vizzly-testing/cli",
       "description": "Official Vizzly plugin for Claude Code - visual regression testing integration with TDD workflow support",
       "owner": {
         "name": "Vizzly Testing",
@@ -2033,8 +2856,25 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "warrenzhu050413-warren-claude-code-plugin-marketplace",
+      "name": "WarrenZhu050413/Warren-Claude-Code-Plugin-Marketplace",
+      "description": "A personal plugin marketplace for Claude Code",
+      "owner": {
+        "name": "WarrenZhu050413",
+        "url": "https://github.com/WarrenZhu050413"
+      },
+      "repository": "https://github.com/WarrenZhu050413/Warren-Claude-Code-Plugin-Marketplace",
+      "manifestUrl": "https://raw.githubusercontent.com/WarrenZhu050413/Warren-Claude-Code-Plugin-Marketplace/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/WarrenZhu050413/Warren-Claude-Code-Plugin-Marketplace",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "webdevtodayjason-titanium-plugins",
-      "name": "Professional Claude Code plugins from Titanium Computing featuring voice",
+      "name": "webdevtodayjason/titanium-plugins",
       "description": "Professional Claude Code plugins from Titanium Computing featuring voice-enhanced AI workflows",
       "owner": {
         "name": "Webdevtodayjason",
@@ -2050,8 +2890,42 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "willibrandon-aseprite-pixelart",
+      "name": "willibrandon/aseprite-pixelart",
+      "description": "Claude Code plugin for creating pixel art with Aseprite through natural language. Supports animation, retro palettes, dithering, and game engine export.",
+      "owner": {
+        "name": "Willibrandon",
+        "url": "https://github.com/willibrandon"
+      },
+      "repository": "https://github.com/willibrandon/aseprite-pixelart",
+      "manifestUrl": "https://raw.githubusercontent.com/willibrandon/aseprite-pixelart/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/willibrandon/aseprite-pixelart",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "willibrandon-pixel-plugin",
+      "name": "willibrandon/pixel-plugin",
+      "description": "Claude Code plugin for creating pixel art with Aseprite through natural language. Supports animation, retro palettes, dithering, and game engine export.",
+      "owner": {
+        "name": "Willibrandon",
+        "url": "https://github.com/willibrandon"
+      },
+      "repository": "https://github.com/willibrandon/pixel-plugin",
+      "manifestUrl": "https://raw.githubusercontent.com/willibrandon/pixel-plugin/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/willibrandon/pixel-plugin",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "witt3rd-claude-plugins",
-      "name": "Professional",
+      "name": "witt3rd/claude-plugins",
       "description": "Professional-grade Claude Code plugins for knowledge management and development workflows",
       "owner": {
         "name": "Witt3rd",
@@ -2067,8 +2941,59 @@
       "addedAt": "2025-10-13"
     },
     {
+      "id": "xiaochunjimmy-remixicon-mcp",
+      "name": "xiaochunjimmy/RemixIcon-MCP",
+      "description": "Official Remix Icon MCP server providing intelligent icon search and discovery with semantic matching",
+      "owner": {
+        "name": "Xiaochunjimmy",
+        "url": "https://github.com/xiaochunjimmy"
+      },
+      "repository": "https://github.com/xiaochunjimmy/RemixIcon-MCP",
+      "manifestUrl": "https://raw.githubusercontent.com/xiaochunjimmy/RemixIcon-MCP/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "productivity"
+      ],
+      "homepage": "https://github.com/xiaochunjimmy/RemixIcon-MCP",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "xloxn69-agileflow",
+      "name": "xloxn69/AgileFlow",
+      "description": "Universal agile/docs-as-code system with 34 commands and 8 specialized subagents",
+      "owner": {
+        "name": "Xloxn69",
+        "url": "https://github.com/xloxn69"
+      },
+      "repository": "https://github.com/xloxn69/AgileFlow",
+      "manifestUrl": "https://raw.githubusercontent.com/xloxn69/AgileFlow/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/xloxn69/AgileFlow",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "xtone-ai-development-tools",
+      "name": "xtone/ai_development_tools",
+      "description": "Claude Code plugins and tools",
+      "owner": {
+        "name": "Xtone",
+        "url": "https://github.com/xtone"
+      },
+      "repository": "https://github.com/xtone/ai_development_tools",
+      "manifestUrl": "https://raw.githubusercontent.com/xtone/ai_development_tools/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/xtone/ai_development_tools",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
       "id": "yamadashy-repomix",
-      "name": "Official Repomix plugins",
+      "name": "yamadashy/repomix",
       "description": "Official Repomix plugins for Claude Code",
       "owner": {
         "name": "Yamadashy",
@@ -2083,6 +3008,93 @@
       "homepage": "https://github.com/yamadashy/repomix",
       "verified": false,
       "addedAt": "2025-10-13"
+    },
+    {
+      "id": "yanmxa-cc-plugins",
+      "name": "yanmxa/cc-plugins",
+      "description": "Claude Code Plugins for comprehensive workflow automation with Git, Jira integration, and self-extending commands",
+      "owner": {
+        "name": "Yanmxa",
+        "url": "https://github.com/yanmxa"
+      },
+      "repository": "https://github.com/yanmxa/cc-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/yanmxa/cc-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development",
+        "productivity"
+      ],
+      "homepage": "https://github.com/yanmxa/cc-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "yanmxa-claude-code-plugins",
+      "name": "yanmxa/claude-code-plugins",
+      "description": "Claude Code Plugins for comprehensive workflow automation with Git, Jira integration, and self-extending commands",
+      "owner": {
+        "name": "Yanmxa",
+        "url": "https://github.com/yanmxa"
+      },
+      "repository": "https://github.com/yanmxa/claude-code-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/yanmxa/claude-code-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development",
+        "productivity"
+      ],
+      "homepage": "https://github.com/yanmxa/claude-code-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "yeetrun-claude-code",
+      "name": "yeetrun/claude-code",
+      "description": "Marketplace manifest for the Yeet plugin: build and deploy your projects seamlessly with Yeet in Claude Code.",
+      "owner": {
+        "name": "Yeetrun",
+        "url": "https://github.com/yeetrun"
+      },
+      "repository": "https://github.com/yeetrun/claude-code",
+      "manifestUrl": "https://raw.githubusercontent.com/yeetrun/claude-code/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "development"
+      ],
+      "homepage": "https://github.com/yeetrun/claude-code",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "zephyrdeng-cc-plugins",
+      "name": "ZephyrDeng/cc-plugins",
+      "description": "专业 Claude Code 插件集合 - 提供 Serena 索引管理和开发工具",
+      "owner": {
+        "name": "ZephyrDeng",
+        "url": "https://github.com/ZephyrDeng"
+      },
+      "repository": "https://github.com/ZephyrDeng/cc-plugins",
+      "manifestUrl": "https://raw.githubusercontent.com/ZephyrDeng/cc-plugins/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/ZephyrDeng/cc-plugins",
+      "verified": false,
+      "addedAt": "2025-10-17"
+    },
+    {
+      "id": "zpaper-com-claudekit",
+      "name": "zpaper-com/ClaudeKit",
+      "description": "Production-ready Claude Code toolkit with essential development agents",
+      "owner": {
+        "name": "Zpaper Com",
+        "url": "https://github.com/zpaper-com"
+      },
+      "repository": "https://github.com/zpaper-com/ClaudeKit",
+      "manifestUrl": "https://raw.githubusercontent.com/zpaper-com/ClaudeKit/main/.claude-plugin/marketplace.json",
+      "tags": [
+        "community"
+      ],
+      "homepage": "https://github.com/zpaper-com/ClaudeKit",
+      "verified": false,
+      "addedAt": "2025-10-17"
     }
   ]
 }
